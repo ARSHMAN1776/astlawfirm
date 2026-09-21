@@ -98,4 +98,45 @@ export const attorneys: Attorney[] = [
     ],
     publications: [],
   },
+  {
+    // ─── Partner / Corporate Counsel at Karachi ───────────────────
+    slug: "muhammad-javed-khan-tanoli",
+    name: "Muhammad Javed Khan Tanoli",
+    image: "/javed-tanoli-portrait.jpg",
+    designation: "Advocate High Court, Sindh (Karachi)",
+    role: "Partner / Corporate Counsel at Karachi",
+    descriptor: "ADVOCATE HIGH COURT, SINDH",
+    isFounder: false,
+    shortBio:
+      "Partner & Corporate Counsel (Karachi) at AST Law Firm. Advocate High Court, Sindh. Leads commercial advisory, corporate compliance, and superior court litigation across Karachi and Sindh.",
+    biography: [
+      "Muhammad Javed Khan Tanoli is a Partner and Corporate Counsel at AST Law Firm, leading the firm's Karachi and Sindh legal practice.",
+      "As Advocate High Court of Sindh (Karachi), he counsels corporate enterprises, financial institutions, and private clients on high-value commercial transactions, regulatory frameworks, and superior court dispute resolution.",
+      "With seasoned courtroom advocacy and transactional experience before the High Court of Sindh and specialized tribunals, he provides strategic counsel across banking, commercial contracts, civil law, and corporate governance.",
+      "He plays an essential role in AST Law Firm's nationwide presence, bridging client matters across Karachi's financial center, Islamabad's principal chambers, and appellate forums.",
+    ],
+    practiceAreas: [
+      "Corporate & Commercial Advisory",
+      "High Court Trial & Appellate Advocacy (Sindh)",
+      "Banking & Financial Dispute Resolution",
+      "Corporate Governance & Regulatory Compliance",
+      "Commercial Drafting & Documentation",
+    ],
+    admissions: [
+      "Advocate, High Court of Sindh",
+      "Sindh Bar Council Registered Practitioner",
+      "Karachi Bar Association & Subordinate Courts",
+    ],
+    education: [
+      "Bachelor of Laws (LL.B)",
+      "Corporate Law & Commercial Governance Practice",
+      "Civil Procedure & Appellate Jurisprudence",
+    ],
+    memberships: [
+      "Sindh High Court Bar Association (SHCBA)",
+      "Karachi Bar Association (KBA)",
+      "Partner & Corporate Counsel, AST Law Firm",
+    ],
+    publications: [],
+  },
 ];

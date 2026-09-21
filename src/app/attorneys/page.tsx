@@ -1,1 +1,12 @@
-export { default, metadata } from "../teams/page";
+import type { Metadata } from "next";
+import TeamsPage from "../teams/page";
+
+export const metadata: Metadata = {
+  title: "Attorneys & Leadership | AST Law Firm",
+  description:
+    "Meet the partners, advocates, and legal counsel of AST Law Firm. Led by Advocate Supreme Court Haji Sabir Hussain Tanoli, Advocate High Court Ahmed Hussain Tanoli, and Partner Muhammad Javed Khan Tanoli.",
+};
+
+export default function AttorneysPage() {
+  return <TeamsPage />;
+}
