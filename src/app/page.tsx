@@ -130,51 +130,63 @@ export default function HomePage() {
           </div>
 
         </div>
+      </section>
 
-        {/* ═══════════════════════════════════════════════════════
-            AUTHORITY & JURISDICTION BAR (Spacious Proof Matrix)
-        ═══════════════════════════════════════════════════════ */}
-        <div className="border-t border-[rgba(17,17,16,0.12)] bg-[#EFECE3]/95 py-8 sm:py-10 lg:py-12 px-5 sm:px-8 lg:px-12">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
-            <div className="flex items-center gap-4 p-2">
-              <div className="w-10 h-10 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 shadow-sm">
+      {/* ═══════════════════════════════════════════════════════
+          2. JURISDICTION & CHAMBERS NETWORK (Separate White Cards on Clean Whitespace)
+      ═══════════════════════════════════════════════════════ */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-[#F7F5EF] border-b border-[rgba(17,17,16,0.10)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            
+            {/* Box 1 — Apex Court */}
+            <div className="bg-white border border-[rgba(17,17,16,0.12)] p-5 sm:p-6 shadow-[0_4px_16px_rgba(0,0,0,0.04)] hover:border-[#8B7355]/50 transition-all duration-300 flex items-start gap-4 group">
+              <div className="w-11 h-11 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                 <Landmark className="w-5 h-5 text-[#8B7355]" />
               </div>
               <div className="min-w-0">
-                <p className="text-[0.68rem] sm:text-[0.74rem] tracking-[0.16em] uppercase text-[#111110] font-bold">Apex Court</p>
+                <span className="text-[0.62rem] tracking-[0.2em] uppercase text-[#8B7355] font-semibold block">Apex Jurisdiction</span>
+                <p className="text-sm font-bold text-[#111110] mt-0.5" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Supreme Court</p>
                 <p className="text-xs text-[#5C5A54] mt-0.5">Supreme Court of Pakistan</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 p-2">
-              <div className="w-10 h-10 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 shadow-sm">
+            {/* Box 2 — Islamabad Principal */}
+            <div className="bg-white border border-[rgba(17,17,16,0.12)] p-5 sm:p-6 shadow-[0_4px_16px_rgba(0,0,0,0.04)] hover:border-[#8B7355]/50 transition-all duration-300 flex items-start gap-4 group">
+              <div className="w-11 h-11 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                 <Building2 className="w-5 h-5 text-[#8B7355]" />
               </div>
               <div className="min-w-0">
-                <p className="text-[0.68rem] sm:text-[0.74rem] tracking-[0.16em] uppercase text-[#111110] font-bold">Islamabad Principal</p>
+                <span className="text-[0.62rem] tracking-[0.2em] uppercase text-[#8B7355] font-semibold block">Principal Chambers</span>
+                <p className="text-sm font-bold text-[#111110] mt-0.5" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Islamabad Practice</p>
                 <p className="text-xs text-[#5C5A54] mt-0.5">Barrister Arcade, G 10/1</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 p-2">
-              <div className="w-10 h-10 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 shadow-sm">
+            {/* Box 3 — Karachi Practice */}
+            <div className="bg-white border border-[rgba(17,17,16,0.12)] p-5 sm:p-6 shadow-[0_4px_16px_rgba(0,0,0,0.04)] hover:border-[#8B7355]/50 transition-all duration-300 flex items-start gap-4 group">
+              <div className="w-11 h-11 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                 <Briefcase className="w-5 h-5 text-[#8B7355]" />
               </div>
               <div className="min-w-0">
-                <p className="text-[0.68rem] sm:text-[0.74rem] tracking-[0.16em] uppercase text-[#111110] font-bold">Karachi Practice</p>
+                <span className="text-[0.62rem] tracking-[0.2em] uppercase text-[#8B7355] font-semibold block">Corporate Counsel</span>
+                <p className="text-sm font-bold text-[#111110] mt-0.5" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Karachi Chambers</p>
                 <p className="text-xs text-[#5C5A54] mt-0.5">High Court of Sindh Counsel</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 p-2">
-              <div className="w-10 h-10 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 shadow-sm">
+            {/* Box 4 — 34+ Years Lineage */}
+            <div className="bg-white border border-[rgba(17,17,16,0.12)] p-5 sm:p-6 shadow-[0_4px_16px_rgba(0,0,0,0.04)] hover:border-[#8B7355]/50 transition-all duration-300 flex items-start gap-4 group">
+              <div className="w-11 h-11 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                 <Award className="w-5 h-5 text-[#8B7355]" />
               </div>
               <div className="min-w-0">
-                <p className="text-[0.68rem] sm:text-[0.74rem] tracking-[0.16em] uppercase text-[#111110] font-bold">34+ Years Tradition</p>
-                <p className="text-xs text-[#5C5A54] mt-0.5">Est. 1992 Lineage</p>
+                <span className="text-[0.62rem] tracking-[0.2em] uppercase text-[#8B7355] font-semibold block">Chamber Lineage</span>
+                <p className="text-sm font-bold text-[#111110] mt-0.5" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>34+ Years Legacy</p>
+                <p className="text-xs text-[#5C5A54] mt-0.5">Continuous Practice Since 1992</p>
               </div>
             </div>
+
           </div>
         </div>
       </section>
