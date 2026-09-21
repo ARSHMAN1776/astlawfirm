@@ -1,0 +1,284 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Light Palette */
+    --cream:       #F7F5EF;
+    --cream-deep:  #EFECE3;
+    --parchment:   #E8E3D6;
+    --ink:         #111110;
+    --ink-mid:     #2D2C2A;
+    --ink-muted:   #5C5A54;
+    --ink-subtle:  #8A8780;
+    --rule:        rgba(17, 17, 16, 0.12);
+    --rule-mid:    rgba(17, 17, 16, 0.07);
+    --gold:        #8B7355;
+    --gold-light:  #B09A6E;
+
+    /* Dark section palette */
+    --dark:        #0F0E0D;
+    --dark-surface:#181714;
+    --dark-border: rgba(255, 255, 255, 0.10);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--cream);
+    color: var(--ink);
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  body {
+    background-color: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: var(--ink);
+    color: var(--cream);
+  }
+
+  :focus-visible {
+    outline: 1.5px solid var(--ink);
+    outline-offset: 3px;
+  }
+}
+
+/* ─── Typography Utilities ──────────────────────────────── */
+
+.font-display {
+  font-family: var(--font-cormorant), Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+
+.font-display-italic {
+  font-family: var(--font-cormorant), Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.12;
+}
+
+.label-caps {
+  font-size: 0.6875rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* ─── Hairline Rules ───────────────────────────────────── */
+
+.rule-b  { border-bottom: 1px solid var(--rule); }
+.rule-t  { border-top:    1px solid var(--rule); }
+.rule-l  { border-left:   1px solid var(--rule); }
+.rule-r  { border-right:  1px solid var(--rule); }
+.rule-x  { border-left: 1px solid var(--rule); border-right: 1px solid var(--rule); }
+
+.rule-b-mid { border-bottom: 1px solid var(--rule-mid); }
+.rule-t-mid { border-top:    1px solid var(--rule-mid); }
+
+/* ─── Background Surfaces ──────────────────────────────── */
+
+.bg-cream      { background-color: var(--cream); }
+.bg-cream-deep { background-color: var(--cream-deep); }
+.bg-parchment  { background-color: var(--parchment); }
+.bg-dark       { background-color: var(--dark); }
+.bg-dark-surface { background-color: var(--dark-surface); }
+
+/* ─── Dark section rule overrides ─────────────────────── */
+.section-dark .rule-b  { border-bottom-color: var(--dark-border); }
+.section-dark .rule-t  { border-top-color: var(--dark-border); }
+
+/* ─── Hover Row (Light Context) ─────────────────────── */
+.practice-row {
+  transition: background-color 0.28s ease, padding-left 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.practice-row:hover {
+  background-color: var(--cream-deep);
+  padding-left: 0.5rem;
+}
+
+/* ─── Image Frame (architectural corner lines) ─────────── */
+.img-frame {
+  position: relative;
+}
+.img-frame::before,
+.img-frame::after {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  z-index: 10;
+}
+.img-frame::before {
+  top: -8px;
+  left: -8px;
+  border-top: 1px solid var(--ink-mid);
+  border-left: 1px solid var(--ink-mid);
+}
+.img-frame::after {
+  bottom: -8px;
+  right: -8px;
+  border-bottom: 1px solid var(--ink-mid);
+  border-right: 1px solid var(--ink-mid);
+}
+
+/* ─── Premium Running Border Beam & Corner Animation ────────── */
+@keyframes beam-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-border-beam {
+  animation: beam-rotate 6s linear infinite;
+}
+
+.animate-border-beam-slow {
+  animation: beam-rotate 9s linear infinite;
+}
+
+.corner-bracket-tl {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 10px;
+  height: 10px;
+  border-top: 1.5px solid #8B7355;
+  border-left: 1.5px solid #8B7355;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0.75;
+}
+
+.corner-bracket-tr {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 10px;
+  height: 10px;
+  border-top: 1.5px solid #8B7355;
+  border-right: 1.5px solid #8B7355;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0.75;
+}
+
+.corner-bracket-bl {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 1.5px solid #8B7355;
+  border-left: 1.5px solid #8B7355;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0.75;
+}
+
+.corner-bracket-br {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 1.5px solid #8B7355;
+  border-right: 1.5px solid #8B7355;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0.75;
+}
+
+.group:hover .corner-bracket-tl {
+  top: 4px;
+  left: 4px;
+  border-color: #06231B;
+  opacity: 1;
+  filter: drop-shadow(-1px -1px 3px rgba(139, 115, 85, 0.4));
+}
+
+.group:hover .corner-bracket-tr {
+  top: 4px;
+  right: 4px;
+  border-color: #06231B;
+  opacity: 1;
+  filter: drop-shadow(1px -1px 3px rgba(139, 115, 85, 0.4));
+}
+
+.group:hover .corner-bracket-bl {
+  bottom: 4px;
+  left: 4px;
+  border-color: #06231B;
+  opacity: 1;
+  filter: drop-shadow(-1px 1px 3px rgba(139, 115, 85, 0.4));
+}
+
+.group:hover .corner-bracket-br {
+  bottom: 4px;
+  right: 4px;
+  border-color: #06231B;
+  opacity: 1;
+  filter: drop-shadow(1px 1px 3px rgba(139, 115, 85, 0.4));
+}
+
+/* ─── Timeline Animated Connector ─────────────────────── */
+@keyframes timelinePulseBeam {
+  0%, 100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.timeline-connector-line {
+  animation: timelinePulseBeam 2.5s ease-in-out infinite;
+}
+
+@keyframes timelineSignalTravel {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+.timeline-signal-particle {
+  animation: timelineSignalTravel 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* ─── Reduced Motion ─────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
