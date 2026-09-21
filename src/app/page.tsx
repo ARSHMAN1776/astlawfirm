@@ -132,47 +132,47 @@ export default function HomePage() {
         </div>
 
         {/* ═══════════════════════════════════════════════════════
-            AUTHORITY & JURISDICTION BAR (Direct Proof Matrix)
+            AUTHORITY & JURISDICTION BAR (Spacious Proof Matrix)
         ═══════════════════════════════════════════════════════ */}
-        <div className="border-t border-[rgba(17,17,16,0.12)] bg-[#EFECE3]/90 py-4 sm:py-5 px-4 sm:px-6 lg:px-10">
-          <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0">
-                <Landmark className="w-4 h-4 text-[#8B7355]" />
+        <div className="border-t border-[rgba(17,17,16,0.12)] bg-[#EFECE3]/95 py-8 sm:py-10 lg:py-12 px-5 sm:px-8 lg:px-12">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
+            <div className="flex items-center gap-4 p-2">
+              <div className="w-10 h-10 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 shadow-sm">
+                <Landmark className="w-5 h-5 text-[#8B7355]" />
               </div>
               <div className="min-w-0">
-                <p className="text-[0.62rem] sm:text-[0.68rem] tracking-[0.14em] uppercase text-[#111110] font-bold truncate">Apex Court</p>
-                <p className="text-[0.58rem] sm:text-[0.64rem] text-[#6B6860] truncate">Supreme Court of Pakistan</p>
+                <p className="text-[0.68rem] sm:text-[0.74rem] tracking-[0.16em] uppercase text-[#111110] font-bold">Apex Court</p>
+                <p className="text-xs text-[#5C5A54] mt-0.5">Supreme Court of Pakistan</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0">
-                <Building2 className="w-4 h-4 text-[#8B7355]" />
+            <div className="flex items-center gap-4 p-2">
+              <div className="w-10 h-10 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 shadow-sm">
+                <Building2 className="w-5 h-5 text-[#8B7355]" />
               </div>
               <div className="min-w-0">
-                <p className="text-[0.62rem] sm:text-[0.68rem] tracking-[0.14em] uppercase text-[#111110] font-bold truncate">Islamabad Principal</p>
-                <p className="text-[0.58rem] sm:text-[0.64rem] text-[#6B6860] truncate">Barrister Arcade, G 10/1</p>
+                <p className="text-[0.68rem] sm:text-[0.74rem] tracking-[0.16em] uppercase text-[#111110] font-bold">Islamabad Principal</p>
+                <p className="text-xs text-[#5C5A54] mt-0.5">Barrister Arcade, G 10/1</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0">
-                <Briefcase className="w-4 h-4 text-[#8B7355]" />
+            <div className="flex items-center gap-4 p-2">
+              <div className="w-10 h-10 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 shadow-sm">
+                <Briefcase className="w-5 h-5 text-[#8B7355]" />
               </div>
               <div className="min-w-0">
-                <p className="text-[0.62rem] sm:text-[0.68rem] tracking-[0.14em] uppercase text-[#111110] font-bold truncate">Karachi Practice</p>
-                <p className="text-[0.58rem] sm:text-[0.64rem] text-[#6B6860] truncate">High Court of Sindh Counsel</p>
+                <p className="text-[0.68rem] sm:text-[0.74rem] tracking-[0.16em] uppercase text-[#111110] font-bold">Karachi Practice</p>
+                <p className="text-xs text-[#5C5A54] mt-0.5">High Court of Sindh Counsel</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0">
-                <Award className="w-4 h-4 text-[#8B7355]" />
+            <div className="flex items-center gap-4 p-2">
+              <div className="w-10 h-10 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 shadow-sm">
+                <Award className="w-5 h-5 text-[#8B7355]" />
               </div>
               <div className="min-w-0">
-                <p className="text-[0.62rem] sm:text-[0.68rem] tracking-[0.14em] uppercase text-[#111110] font-bold truncate">34+ Years Tradition</p>
-                <p className="text-[0.58rem] sm:text-[0.64rem] text-[#6B6860] truncate">Est. 1992 Lineage</p>
+                <p className="text-[0.68rem] sm:text-[0.74rem] tracking-[0.16em] uppercase text-[#111110] font-bold">34+ Years Tradition</p>
+                <p className="text-xs text-[#5C5A54] mt-0.5">Est. 1992 Lineage</p>
               </div>
             </div>
           </div>
