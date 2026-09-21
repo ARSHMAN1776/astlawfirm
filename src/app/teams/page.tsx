@@ -189,13 +189,6 @@ export default function TeamsPage() {
 
                     <p className="text-[#5C5A54] text-sm sm:text-base leading-relaxed">{attorney.shortBio}</p>
 
-                    {/* Biography */}
-                    <div className="space-y-3.5 text-sm text-[#5C5A54] leading-relaxed border-t border-[rgba(17,17,16,0.10)] pt-5">
-                      {attorney.biography.slice(0, 3).map((para: string, i: number) => (
-                        <p key={i}>{para}</p>
-                      ))}
-                    </div>
-
                     {/* Practice Areas */}
                     <div className="border-t border-[rgba(17,17,16,0.10)] pt-5 space-y-2.5">
                       <h4 className="text-[0.6rem] tracking-[0.24em] uppercase text-[#8A8780] font-medium">Areas of Practice</h4>
