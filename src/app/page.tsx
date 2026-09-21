@@ -29,189 +29,198 @@ export default function HomePage() {
     <div className="bg-[#F7F5EF] text-[#111110] overflow-x-hidden">
 
       {/* ═══════════════════════════════════════════════════════
-          1. HERO — Classical Architectural Authority
+          1. HERO — Luxury Full-Bleed (Premium · No Scroll · Viewport Perfect)
       ═══════════════════════════════════════════════════════ */}
-      <section className="relative bg-[#F7F5EF] flex flex-col justify-between overflow-hidden border-b border-[rgba(17,17,16,0.10)]">
-        <div className="w-full grid grid-cols-1 lg:grid-cols-12 items-stretch flex-grow">
+      <section
+        className="relative bg-[#F7F5EF] overflow-hidden"
+        style={{ height: "100vh", maxHeight: "100vh" }}
+      >
+        {/* RIGHT PANEL — frosted glass AST logo image, strictly right half */}
+        <div
+          className="absolute top-0 bottom-0 right-0 z-0 overflow-hidden hidden lg:block"
+          style={{ width: "48%" }}
+        >
+          <Image
+            src="/hero-glass-logo.png"
+            alt="AST Law Firm"
+            fill
+            className="object-cover"
+            style={{ objectPosition: "center 30%" }}
+            priority
+            sizes="48vw"
+          />
+          {/* Dark glassy overlay — premium black glass effect */}
+          <div
+            className="absolute inset-0"
+            style={{ background: "rgba(6,5,4,0.32)" }}
+          />
+          {/* Edge vignette — darker corners for depth */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, transparent 30%, rgba(0,0,0,0.22) 100%)",
+            }}
+          />
+        </div>
 
-          {/* LEFT: Legal Authority & Positioning */}
-          <div className="lg:col-span-7 xl:col-span-6 flex flex-col justify-center px-4 sm:px-6 md:px-8 lg:pl-10 xl:pl-14 lg:pr-6 pt-28 sm:pt-32 lg:pt-36 pb-12 lg:pb-16 space-y-5 sm:space-y-6">
+        {/* Mobile fallback — wide reception image full-bleed with strong left overlay */}
+        <div className="absolute inset-0 z-0 lg:hidden">
+          <Image
+            src="/hero-luxury-bg.jpg"
+            alt="AST Law Firm — Premium Chambers"
+            fill
+            className="object-cover"
+            style={{ objectPosition: "center 40%" }}
+            priority
+            sizes="100vw"
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: "linear-gradient(to right, #F7F5EF 0%, #F7F5EF 30%, rgba(247,245,239,0.85) 50%, rgba(247,245,239,0.55) 100%)",
+            }}
+          />
+        </div>
+
+        {/* TEXT CONTENT — vertically centered, clears navbar */}
+        <div
+          className="relative z-10 flex flex-col justify-center"
+          style={{ height: "100vh", paddingTop: "56px" }}
+        >
+          <div className="px-6 sm:px-10 lg:px-16 xl:px-20 max-w-[40rem]">
+
             {/* Eyebrow */}
-            <div className="flex items-center gap-3">
-              <span className="w-5 h-[1.5px] bg-[#06231B]" />
-              <span className="text-[0.65rem] sm:text-xs tracking-[0.28em] uppercase text-[#06231B] font-semibold">
-                AST LAW FIRM · EST. {legacy.since}
+            <div className="flex items-center gap-3 mb-5 sm:mb-6">
+              <span className="w-7 h-px bg-[#8B7355]" />
+              <span className="text-[0.6rem] sm:text-[0.65rem] tracking-[0.28em] uppercase text-[#8B7355] font-semibold">
+                AST Law Firm · Est. {legacy.since}
               </span>
             </div>
 
             {/* Headline */}
             <h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[3rem] xl:text-[3.4rem] leading-[1.15] text-[#0A1A15] tracking-tight"
-              style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontWeight: 400 }}
+              className="leading-[1.10] tracking-[-0.01em] text-[#0A1A15] mb-4 sm:mb-5"
+              style={{
+                fontFamily: "var(--font-cormorant), Georgia, serif",
+                fontWeight: 400,
+                fontSize: "clamp(2.4rem, 4.4vw + 0.5rem, 4.2rem)",
+              }}
             >
-              <div>Professional Legal</div>
-              <div className="mt-1">Representation.</div>
-              <div
-                className="mt-2 text-[#06231B]"
-                style={{ fontStyle: "italic", fontWeight: 300 }}
+              <span className="block">Professional Legal</span>
+              <span className="block">Representation.</span>
+              <span
+                className="block mt-1.5"
+                style={{ fontStyle: "italic", fontWeight: 300, color: "#8B7355" }}
               >
                 Strategic Counsel.
-              </div>
-              <div className="mt-1">
+              </span>
+              <span className="block" style={{ color: "#0A1A15" }}>
                 Trusted Advocacy.
-              </div>
+              </span>
             </h1>
 
-            {/* Supporting description */}
-            <p className="text-[#55534E] text-xs sm:text-sm md:text-base leading-relaxed max-w-xl font-normal">
-              AST Law Firm provides superior court litigation, legal advisory, corporate governance, and commercial documentation across Pakistan. Backed by a continuous 34-year lineage rooted in Supreme Court jurisprudence.
+            {/* Gold accent rule */}
+            <div className="w-12 h-px bg-[#8B7355]/50 mb-4 sm:mb-5" />
+
+            {/* Description */}
+            <p
+              className="text-[#4E4C47] leading-[1.68] max-w-[30rem] mb-6 sm:mb-8"
+              style={{ fontSize: "clamp(0.78rem, 1.1vw, 0.92rem)" }}
+            >
+              Superior court litigation, legal advisory, corporate governance, and commercial documentation across Pakistan — backed by a 34-year lineage rooted in Supreme Court jurisprudence.
             </p>
 
-            {/* Left-bordered Multi-City Leadership citation */}
-            <div className="border-l-2 border-[#8B7355] pl-3.5 py-1 max-w-xl bg-[#FAF8F3] border border-y-0 border-r-0 border-[rgba(17,17,16,0.06)] p-3">
-              <p className="text-[0.72rem] sm:text-xs text-[#5C5A54] leading-relaxed">
-                Led by <strong className="text-[#111110] font-medium">Haji Sabir Hussain Tanoli</strong> (Advocate Supreme Court of Pakistan), <strong className="text-[#111110] font-medium">Ahmed Hussain Tanoli</strong> (Advocate High Court, Managing Partner), and <strong className="text-[#111110] font-medium">Muhammad Javed Khan Tanoli</strong> (Advocate High Court Sindh, Corporate Counsel Karachi).
-              </p>
-            </div>
-
-            {/* 2 Action Buttons */}
-            <div className="pt-2 flex flex-wrap items-center gap-3.5">
+            {/* CTA Button */}
+            <div>
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-2.5 px-6 py-3.5 bg-[#06231B] text-[#F7F5EF] hover:bg-[#0A3328] font-medium text-[0.68rem] sm:text-xs tracking-[0.16em] uppercase transition-all duration-200 shadow-sm"
+                className="group inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 bg-[#06231B] text-[#F7F5EF] hover:bg-[#0A3328] font-medium text-[0.65rem] sm:text-[0.70rem] tracking-[0.18em] uppercase transition-all duration-300 shadow-md hover:shadow-xl"
               >
                 <span>Request a Consultation</span>
-                <span className="text-sm leading-none transition-transform duration-200 group-hover:translate-x-1">→</span>
-              </Link>
-              <Link
-                href="/practice-areas"
-                className="inline-flex items-center gap-2 px-5 py-3.5 border border-[#06231B]/30 hover:border-[#06231B] text-[#06231B] hover:bg-[#06231B]/5 font-medium text-[0.68rem] sm:text-xs tracking-[0.15em] uppercase transition-colors duration-200 bg-transparent"
-              >
-                <span>Explore Practice Areas</span>
-                <span className="text-xs leading-none">↗</span>
+                <span className="leading-none transition-transform duration-300 group-hover:translate-x-1">→</span>
               </Link>
             </div>
+
           </div>
-
-          {/* RIGHT: Authentic AST Reception Wall in Arched Frame */}
-          <div className="lg:col-span-5 xl:col-span-6 relative flex items-end justify-end pt-6 lg:pt-20 min-h-[320px] sm:min-h-[400px] lg:min-h-[520px]">
-            <div className="relative w-full h-full min-h-[320px] sm:min-h-[420px] lg:min-h-[540px] rounded-tl-[60px] sm:rounded-tl-[90px] lg:rounded-tl-[130px] overflow-hidden border-t border-l border-[rgba(17,17,16,0.15)] bg-[#111110] shadow-[-12px_12px_35px_-8px_rgba(0,0,0,0.18)] group">
-              <Image
-                src="/hero-ast-wall-feature.jpg"
-                alt="AST Law Firm — Reception & Chamber Wall"
-                fill
-                className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.02]"
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 700px"
-              />
-              <div className="absolute inset-0 bg-black/15 pointer-events-none" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/10 pointer-events-none" />
-
-              {/* Verified Badge Overlay at bottom-right */}
-              <div className="absolute bottom-4 left-4 right-4 sm:left-6 sm:right-6 bg-[#06231B]/90 backdrop-blur-md border border-[#8B7355]/40 p-3 sm:p-4 text-white flex items-center justify-between pointer-events-none">
-                <div className="space-y-0.5">
-                  <span className="text-[0.58rem] sm:text-[0.62rem] tracking-[0.22em] uppercase text-[#8B7355] font-semibold block">
-                    Institutional Presence
-                  </span>
-                  <p className="text-xs sm:text-sm font-serif text-[#FAF8F4] font-medium" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
-                    Islamabad · Karachi · Abbottabad
-                  </p>
-                </div>
-                <div className="text-right">
-                  <span className="text-[0.58rem] sm:text-[0.62rem] tracking-[0.18em] uppercase text-[#C8C4B8] block">
-                    Lineage
-                  </span>
-                  <span className="text-xs sm:text-sm font-mono text-[#FAF8F4] font-semibold">
-                    1992 — 2026
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
+
+        {/* Thin gold bottom accent */}
+        <div className="absolute bottom-0 left-0 right-0 z-10 h-px bg-[#8B7355]/20" />
       </section>
 
-      {/* ═══════════════════════════════════════════════════════
-          2. JURISDICTION & CHAMBERS NETWORK (Distinct Background & Framed Outer Box)
-      ═══════════════════════════════════════════════════════ */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-[#E8E3D5] border-t border-b border-[rgba(17,17,16,0.14)] relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-          
-          {/* Framed Outer Container Box with Border Line & Gold Corner Accents */}
-          <div className="relative border border-[rgba(17,17,16,0.18)] bg-[#FAF8F3] p-6 sm:p-8 lg:p-10 shadow-[0_8px_30px_rgba(17,17,16,0.06)]">
-            
-            {/* Architectural Corner Accents */}
-            <div className="absolute top-2 left-2 text-[0.7rem] text-[#8B7355]/60 select-none font-serif">┌</div>
-            <div className="absolute top-2 right-2 text-[0.7rem] text-[#8B7355]/60 select-none font-serif">┐</div>
-            <div className="absolute bottom-2 left-2 text-[0.7rem] text-[#8B7355]/60 select-none font-serif">└</div>
-            <div className="absolute bottom-2 right-2 text-[0.7rem] text-[#8B7355]/60 select-none font-serif">┘</div>
 
-            {/* Header Eyebrow inside the framed box */}
-            <div className="flex items-center justify-between pb-6 mb-6 border-b border-[rgba(17,17,16,0.10)]">
-              <div className="flex items-center gap-2.5">
-                <span className="w-5 h-[1.5px] bg-[#8B7355]" />
-                <span className="text-[0.65rem] sm:text-xs tracking-[0.26em] uppercase text-[#8B7355] font-semibold">
-                  Institutional Authority &amp; Nationwide Reach
-                </span>
-              </div>
-              <span className="text-[0.58rem] sm:text-[0.62rem] tracking-[0.18em] uppercase text-[#6B6860] font-mono hidden sm:inline-block">
-                Supreme Court · Islamabad · Karachi · Abbottabad
+
+      {/* ═══════════════════════════════════════════════════════
+          2. JURISDICTION & CHAMBERS NETWORK (Full Bleed · No Outer Side Spaces · No Corners)
+      ═══════════════════════════════════════════════════════ */}
+      <section className="bg-[#FAF8F3] border-t border-b border-[rgba(17,17,16,0.14)] w-full py-8 sm:py-10 lg:py-12">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-12">
+          
+          {/* Header Eyebrow */}
+          <div className="flex items-center justify-between pb-5 mb-6 border-b border-[rgba(17,17,16,0.10)]">
+            <div className="flex items-center gap-2.5">
+              <span className="w-5 h-[1.5px] bg-[#8B7355]" />
+              <span className="text-[0.65rem] sm:text-xs tracking-[0.26em] uppercase text-[#8B7355] font-semibold">
+                Institutional Authority &amp; Nationwide Reach
               </span>
             </div>
+            <span className="text-[0.58rem] sm:text-[0.62rem] tracking-[0.18em] uppercase text-[#6B6860] font-mono hidden sm:inline-block">
+              Supreme Court · Islamabad · Karachi · Abbottabad
+            </span>
+          </div>
 
-            {/* 4 Separate Cards Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-              
-              {/* Box 1 — Apex Court */}
-              <div className="bg-white border border-[rgba(17,17,16,0.14)] p-5 sm:p-6 shadow-sm hover:border-[#8B7355] transition-all duration-300 flex items-start gap-4 group">
-                <div className="w-11 h-11 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 shadow-sm group-hover:scale-105 transition-transform">
-                  <Landmark className="w-5 h-5 text-[#8B7355]" />
-                </div>
-                <div className="min-w-0">
-                  <span className="text-[0.62rem] tracking-[0.2em] uppercase text-[#8B7355] font-semibold block">Apex Jurisdiction</span>
-                  <p className="text-base font-bold text-[#111110] mt-0.5" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Supreme Court</p>
-                  <p className="text-xs text-[#5C5A54] mt-0.5">Supreme Court of Pakistan</p>
-                </div>
+          {/* 4 Separate Cards Grid — Full Width Coverage & Zero Shadows */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            
+            {/* Box 1 — Apex Court */}
+            <div className="bg-white border border-[rgba(17,17,16,0.14)] p-5 sm:p-6 hover:border-[#8B7355] transition-colors flex items-start gap-4 group">
+              <div className="w-11 h-11 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                <Landmark className="w-5 h-5 text-[#8B7355]" />
               </div>
-
-              {/* Box 2 — Islamabad Principal */}
-              <div className="bg-white border border-[rgba(17,17,16,0.14)] p-5 sm:p-6 shadow-sm hover:border-[#8B7355] transition-all duration-300 flex items-start gap-4 group">
-                <div className="w-11 h-11 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 shadow-sm group-hover:scale-105 transition-transform">
-                  <Building2 className="w-5 h-5 text-[#8B7355]" />
-                </div>
-                <div className="min-w-0">
-                  <span className="text-[0.62rem] tracking-[0.2em] uppercase text-[#8B7355] font-semibold block">Principal Chambers</span>
-                  <p className="text-base font-bold text-[#111110] mt-0.5" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Islamabad Practice</p>
-                  <p className="text-xs text-[#5C5A54] mt-0.5">Barrister Arcade, G 10/1</p>
-                </div>
+              <div className="min-w-0">
+                <span className="text-[0.62rem] tracking-[0.2em] uppercase text-[#8B7355] font-semibold block">Apex Jurisdiction</span>
+                <p className="text-base font-bold text-[#111110] mt-0.5" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Supreme Court</p>
+                <p className="text-xs text-[#5C5A54] mt-0.5">Supreme Court of Pakistan</p>
               </div>
-
-              {/* Box 3 — Karachi Practice */}
-              <div className="bg-white border border-[rgba(17,17,16,0.14)] p-5 sm:p-6 shadow-sm hover:border-[#8B7355] transition-all duration-300 flex items-start gap-4 group">
-                <div className="w-11 h-11 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 shadow-sm group-hover:scale-105 transition-transform">
-                  <Briefcase className="w-5 h-5 text-[#8B7355]" />
-                </div>
-                <div className="min-w-0">
-                  <span className="text-[0.62rem] tracking-[0.2em] uppercase text-[#8B7355] font-semibold block">Corporate Counsel</span>
-                  <p className="text-base font-bold text-[#111110] mt-0.5" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Karachi Chambers</p>
-                  <p className="text-xs text-[#5C5A54] mt-0.5">High Court of Sindh Counsel</p>
-                </div>
-              </div>
-
-              {/* Box 4 — 34+ Years Lineage */}
-              <div className="bg-white border border-[rgba(17,17,16,0.14)] p-5 sm:p-6 shadow-sm hover:border-[#8B7355] transition-all duration-300 flex items-start gap-4 group">
-                <div className="w-11 h-11 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 shadow-sm group-hover:scale-105 transition-transform">
-                  <Award className="w-5 h-5 text-[#8B7355]" />
-                </div>
-                <div className="min-w-0">
-                  <span className="text-[0.62rem] tracking-[0.2em] uppercase text-[#8B7355] font-semibold block">Chamber Lineage</span>
-                  <p className="text-base font-bold text-[#111110] mt-0.5" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>34+ Years Legacy</p>
-                  <p className="text-xs text-[#5C5A54] mt-0.5">Continuous Practice Since 1992</p>
-                </div>
-              </div>
-
             </div>
+
+            {/* Box 2 — Islamabad Principal */}
+            <div className="bg-white border border-[rgba(17,17,16,0.14)] p-5 sm:p-6 hover:border-[#8B7355] transition-colors flex items-start gap-4 group">
+              <div className="w-11 h-11 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                <Building2 className="w-5 h-5 text-[#8B7355]" />
+              </div>
+              <div className="min-w-0">
+                <span className="text-[0.62rem] tracking-[0.2em] uppercase text-[#8B7355] font-semibold block">Principal Chambers</span>
+                <p className="text-base font-bold text-[#111110] mt-0.5" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Islamabad Practice</p>
+                <p className="text-xs text-[#5C5A54] mt-0.5">Barrister Arcade, G 10/1</p>
+              </div>
+            </div>
+
+            {/* Box 3 — Karachi Practice */}
+            <div className="bg-white border border-[rgba(17,17,16,0.14)] p-5 sm:p-6 hover:border-[#8B7355] transition-colors flex items-start gap-4 group">
+              <div className="w-11 h-11 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                <Briefcase className="w-5 h-5 text-[#8B7355]" />
+              </div>
+              <div className="min-w-0">
+                <span className="text-[0.62rem] tracking-[0.2em] uppercase text-[#8B7355] font-semibold block">Corporate Counsel</span>
+                <p className="text-base font-bold text-[#111110] mt-0.5" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Karachi Chambers</p>
+                <p className="text-xs text-[#5C5A54] mt-0.5">High Court of Sindh Counsel</p>
+              </div>
+            </div>
+
+            {/* Box 4 — 34+ Years Lineage */}
+            <div className="bg-white border border-[rgba(17,17,16,0.14)] p-5 sm:p-6 hover:border-[#8B7355] transition-colors flex items-start gap-4 group">
+              <div className="w-11 h-11 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                <Award className="w-5 h-5 text-[#8B7355]" />
+              </div>
+              <div className="min-w-0">
+                <span className="text-[0.62rem] tracking-[0.2em] uppercase text-[#8B7355] font-semibold block">Chamber Lineage</span>
+                <p className="text-base font-bold text-[#111110] mt-0.5" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>34+ Years Legacy</p>
+                <p className="text-xs text-[#5C5A54] mt-0.5">Continuous Practice Since 1992</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -359,65 +368,83 @@ export default function HomePage() {
       <section id="legacy" className="border-t border-[rgba(17,17,16,0.10)] bg-[#FAF8F4] relative overflow-hidden">
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 items-stretch">
 
-          {/* Left Column — Historical Narrative & Epoch Cards */}
-          <div className="lg:col-span-7 xl:col-span-7 px-4 sm:px-6 md:px-8 lg:px-12 py-14 sm:py-18 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[rgba(17,17,16,0.10)]">
+          {/* Left Column — Historical Narrative & Epoch Cards (Spacious, Elegant Typography) */}
+          <div className="lg:col-span-7 xl:col-span-7 px-5 sm:px-8 lg:px-12 xl:px-14 py-14 sm:py-18 lg:py-20 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[rgba(17,17,16,0.10)]">
             <div>
-              <div className="flex items-center gap-3 mb-3">
+              {/* Eyebrow */}
+              <div className="flex items-center gap-3 mb-4">
                 <span className="w-6 h-[1.5px] bg-[#8B7355]" />
                 <span className="text-[0.65rem] sm:text-xs tracking-[0.28em] uppercase text-[#8B7355] font-semibold">
                   Chamber Lineage Since {legacy.since} · Over 34 Years
                 </span>
               </div>
 
+              {/* Main Heading */}
               <h2
-                className="text-3xl sm:text-4xl lg:text-[2.6rem] text-[#111110] mb-5 leading-[1.18] tracking-tight"
+                className="text-3xl sm:text-4xl lg:text-[2.75rem] text-[#111110] mb-6 leading-[1.18] tracking-tight"
                 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontWeight: 400 }}
               >
                 A Tradition of Principled Courtroom Advocacy
               </h2>
 
-              <p className="text-xs sm:text-sm md:text-base text-[#5C5A54] leading-relaxed mb-6 font-normal">
-                AST Law Firm is the modern evolution of Tanawal Law Associates (TLA), founded in 1992 by Haji Sabir Hussain Tanoli. For over three decades, our chambers have shaped key legal precedents across constitutional, civil, and corporate jurisprudence.
+              {/* Lead Paragraph */}
+              <p
+                className="text-base sm:text-lg text-[#2D2C2A] leading-relaxed mb-8 font-normal"
+                style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
+              >
+                AST Law Firm is the continuation of a distinguished legal practice with a professional legacy dating back to {legacy.since}—built on principled courtroom advocacy, meticulous preparation, and enduring client confidence across the superior courts of Pakistan.
               </p>
 
-              {/* Two Heritage Epoch Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-                <div className="p-4 sm:p-5 bg-[#FAF8F3] border border-[rgba(17,17,16,0.10)] hover:border-[#8B7355]/40 transition-all duration-300">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-serif text-[#8B7355] tracking-widest font-semibold" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
-                      FOUNDATION · 1992
-                    </span>
-                    <span className="text-[0.55rem] tracking-[0.16em] uppercase text-[#5C5A54] bg-[#EFECE3] px-2 py-0.5 font-medium">
-                      Origin
-                    </span>
+              {/* Two Heritage Epoch Cards (Generous & Spacious) */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 my-8">
+                {/* 1992 Foundation */}
+                <div className="p-5 sm:p-6 bg-[#FAF8F3] border border-[rgba(17,17,16,0.12)] hover:border-[#8B7355]/40 transition-all duration-300 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-xs font-serif text-[#8B7355] tracking-widest font-semibold" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
+                        FOUNDATION · 1992
+                      </span>
+                      <span className="text-[0.58rem] tracking-[0.16em] uppercase text-[#5C5A54] bg-[#EFECE3] px-2.5 py-0.5 font-medium">
+                        Origin
+                      </span>
+                    </div>
+                    <h4 className="text-base font-semibold text-[#111110] mb-2" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
+                      Tanawal Law Associates (TLA)
+                    </h4>
+                    <p className="text-xs sm:text-[0.8rem] text-[#5C5A54] leading-relaxed">
+                      Established by <strong className="text-[#111110] font-medium">Haji Sabir Hussain Tanoli</strong>, Advocate Supreme Court of Pakistan, setting the foundation of trial and appellate advocacy.
+                    </p>
                   </div>
-                  <h4 className="text-sm font-semibold text-[#111110] mb-1">
-                    Tanawal Law Associates (TLA)
-                  </h4>
-                  <p className="text-xs text-[#5C5A54] leading-relaxed">
-                    Founded by Haji Sabir Hussain Tanoli, establishing judicial excellence before superior courts and high trial tribunals.
-                  </p>
                 </div>
 
-                <div className="p-4 sm:p-5 bg-[#FAF8F3] border border-[rgba(17,17,16,0.10)] hover:border-[#06231B]/40 transition-all duration-300">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-serif text-[#06231B] tracking-widest font-semibold" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
-                      UNIFIED PRACTICE · 2026
-                    </span>
-                    <span className="text-[0.55rem] tracking-[0.16em] uppercase text-[#06231B] bg-[#06231B]/10 px-2 py-0.5 font-medium">
-                      Modern Era
-                    </span>
+                {/* 2026 Unified Practice */}
+                <div className="p-5 sm:p-6 bg-[#FAF8F3] border border-[rgba(17,17,16,0.12)] hover:border-[#06231B]/40 transition-all duration-300 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-xs font-serif text-[#06231B] tracking-widest font-semibold" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
+                        UNIFIED PRACTICE · 2026
+                      </span>
+                      <span className="text-[0.58rem] tracking-[0.16em] uppercase text-[#06231B] bg-[#06231B]/10 px-2.5 py-0.5 font-medium">
+                        Modern Era
+                      </span>
+                    </div>
+                    <h4 className="text-base font-semibold text-[#111110] mb-2" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
+                      AST LAW FIRM
+                    </h4>
+                    <p className="text-xs sm:text-[0.8rem] text-[#5C5A54] leading-relaxed">
+                      Consolidated under <strong className="text-[#111110] font-medium">Ahmed Hussain Tanoli</strong> &amp; <strong className="text-[#111110] font-medium">Muhammad Javed Khan Tanoli</strong>, unifying senior Supreme Court advocacy with corporate counseling.
+                    </p>
                   </div>
-                  <h4 className="text-sm font-semibold text-[#111110] mb-1">
-                    AST LAW FIRM
-                  </h4>
-                  <p className="text-xs text-[#5C5A54] leading-relaxed">
-                    Consolidated multi-city practice under Managing Partner Ahmed Hussain Tanoli &amp; Karachi Partner Javed Khan Tanoli.
-                  </p>
                 </div>
               </div>
+
+              {/* Narrative Summary */}
+              <p className="text-xs sm:text-sm text-[#5C5A54] leading-relaxed font-normal mb-8">
+                AST combines the legacy and experience of a legal practice established in {legacy.since} with a contemporary multi-city professional identity serving corporate enterprises, financial institutions, and private clients across Pakistan.
+              </p>
             </div>
 
+            {/* Bottom Citation & Link */}
             <div className="pt-6 border-t border-[rgba(17,17,16,0.10)] flex flex-wrap items-center justify-between gap-4">
               <div className="border-l-2 border-[#8B7355] pl-3 py-0.5">
                 <p className="text-xs sm:text-[0.78rem] tracking-[0.18em] uppercase text-[#111110] font-bold">
@@ -439,9 +466,9 @@ export default function HomePage() {
           </div>
 
           {/* Right Column — Framed Archive & Stats */}
-          <div className="lg:col-span-5 xl:col-span-5 bg-[#F2EFE9] px-4 sm:px-6 lg:px-8 py-10 sm:py-14 flex flex-col justify-between gap-6">
-            <div className="relative bg-[#FAF8F3] p-3 sm:p-4 border border-[rgba(17,17,16,0.12)] shadow-md">
-              <div className="relative aspect-[16/10] w-full overflow-hidden border border-[rgba(17,17,16,0.10)] bg-[#111110] group">
+          <div className="lg:col-span-5 xl:col-span-5 bg-[#F2EFE9] px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 lg:pt-10 pb-8 sm:pb-12 flex flex-col justify-between gap-5">
+            <div className="relative bg-[#FAF8F3] p-3 sm:p-4 border border-[rgba(17,17,16,0.12)] shadow-md flex-1 flex flex-col justify-between">
+              <div className="relative w-full flex-1 min-h-[300px] sm:min-h-[350px] lg:min-h-[390px] overflow-hidden border border-[rgba(17,17,16,0.10)] bg-[#111110] group">
                 <Image
                   src="/desk-pakistan.jpg"
                   alt="AST Law Firm — Chambers & Legal Research"
@@ -691,11 +718,11 @@ export default function HomePage() {
 
 
       {/* ═══════════════════════════════════════════════════════
-          7. PARTNERS & LEADERSHIP (ALL 3 PARTNERS SHOWCASE)
+          7. LEADERSHIP & COUNSEL (Theme Matched · Ivory, Charcoal & Gold)
       ═══════════════════════════════════════════════════════ */}
-      <section className="bg-[#0D1914] text-[#FAF8F4] py-16 sm:py-24 border-t border-b border-[rgba(255,255,255,0.1)]">
-        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-12">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-white/15">
+      <section className="bg-[#FAF8F3] text-[#111110] py-16 sm:py-24 border-t border-b border-[rgba(17,17,16,0.12)] relative overflow-hidden">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-12 relative z-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-[rgba(17,17,16,0.12)]">
             <div>
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-6 h-[1.5px] bg-[#8B7355]" />
@@ -704,99 +731,85 @@ export default function HomePage() {
                 </span>
               </div>
               <h2
-                className="text-3xl sm:text-4xl lg:text-5xl text-[#FAF8F4] tracking-tight"
+                className="text-3xl sm:text-4xl lg:text-5xl text-[#111110] tracking-tight"
                 style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontWeight: 400 }}
               >
                 Partners &amp; Leadership
               </h2>
             </div>
-            <p className="text-[#B5B2AA] text-xs sm:text-sm max-w-md leading-relaxed">
-              The founding principals and corporate counsel guiding strategic direction, superior court litigation, and client advocacy across AST Law Firm.
+            <p className="text-[#5C5A54] text-xs sm:text-sm max-w-md leading-relaxed">
+              The founding principals and corporate counsel providing courtroom authority, strategic direction, and client advocacy across AST Law Firm.
             </p>
           </div>
 
-          {/* 3-Column Executive Partner Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 pt-10">
-            {attorneys.map((partner) => (
+          {/* 3 Animated Sleek Partner Cards (Compact Size) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 pt-6">
+            {attorneys.map((partner, idx) => (
               <div
                 key={partner.slug}
-                className="bg-[#142620] border border-white/10 overflow-hidden group hover:border-[#8B7355]/60 transition-all duration-300 flex flex-col justify-between shadow-xl"
+                className="relative p-[1.5px] overflow-hidden group bg-[rgba(17,17,16,0.08)] hover:bg-[rgba(17,17,16,0.15)] transition-all duration-300"
               >
-                <div>
-                  {/* Portrait with 3:4 Aspect Ratio */}
-                  <div className="relative aspect-[3/4] w-full bg-[#0A1511] overflow-hidden">
-                    {partner.image && (
-                      <Image
-                        src={partner.image}
-                        alt={partner.name}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 380px"
-                        className="object-cover object-top filter contrast-[1.02] transition-transform duration-500 group-hover:scale-[1.02]"
-                      />
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#142620] via-transparent to-black/20 pointer-events-none" />
+                {/* Continuous Running Border Beam Animation in Antique Gold */}
+                <div
+                  className="absolute inset-[-180%] animate-border-beam opacity-30 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                  style={{
+                    background:
+                      "conic-gradient(from 0deg, transparent 0deg 315deg, rgba(139,115,85,0.9) 345deg, rgba(17,17,16,1) 360deg)",
+                    animationDelay: `${idx * 0.8}s`,
+                  }}
+                />
 
-                    {/* Top Crest / Role Badge */}
-                    <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
-                      <div className="w-8 h-8 border border-[#8B7355]/40 bg-[#FAF8F4]/90 backdrop-blur-sm flex items-center justify-center p-1 shadow-sm">
-                        <Image src="/branding/ast-monogram-exact.png" alt="AST Crest" width={22} height={22} className="object-contain" />
+                {/* Inner Card Content — Compact */}
+                <div className="relative bg-[#FFFFFF] group-hover:bg-[#FCFBF8] p-4 sm:p-5 h-full flex flex-col justify-between transition-colors duration-300">
+                  <div>
+                    {/* Top Row: Monogram Crest + Role Badge */}
+                    <div className="flex items-center justify-between mb-3 pb-2 border-b border-[rgba(17,17,16,0.08)]">
+                      <div className="w-7 h-7 border border-[#8B7355]/40 bg-[#FAF8F3] flex items-center justify-center p-1 shadow-sm">
+                        <Image src="/branding/ast-monogram-exact.png" alt="AST Crest" width={18} height={18} className="object-contain" />
                       </div>
-                      <span className="text-[0.55rem] tracking-[0.2em] uppercase font-mono px-2 py-0.5 bg-[#06231B] text-[#FAF8F4] font-semibold border border-[#8B7355]/30 shadow-sm">
-                        PARTNER
+                      <span className="text-[0.52rem] tracking-[0.18em] uppercase font-mono px-2 py-0.5 bg-[#F7F5EF] text-[#111110] font-semibold border border-[rgba(17,17,16,0.12)]">
+                        {partner.isFounder ? "FOUNDER" : "PARTNER"}
                       </span>
                     </div>
 
-                    {/* Overlay Title at bottom of photo */}
-                    <div className="absolute inset-x-0 bottom-0 p-4 pt-8 bg-gradient-to-t from-[#142620] to-transparent pointer-events-none">
-                      <div className="border-l-2 border-[#8B7355] pl-2 py-0.5 mb-1">
-                        <span className="text-[0.62rem] sm:text-[0.68rem] tracking-[0.16em] uppercase text-[#FAF8F4] font-bold block">
-                          {partner.role}
-                        </span>
-                      </div>
-                      <h3
-                        className="text-xl sm:text-2xl text-[#FAF8F4] font-semibold"
-                        style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontWeight: 600 }}
-                      >
-                        {partner.name}
-                      </h3>
-                      <p className="text-[0.62rem] sm:text-[0.66rem] tracking-[0.14em] uppercase text-[#8B7355] font-medium mt-0.5">
-                        {partner.designation}
-                      </p>
+                    {/* Role Title with Gold Accent Bar */}
+                    <div className="border-l-2 border-[#8B7355] pl-2 py-0.5 mb-1.5">
+                      <span className="text-[0.62rem] tracking-[0.14em] uppercase text-[#111110] font-bold block">
+                        {partner.role}
+                      </span>
                     </div>
-                  </div>
 
-                  {/* Bio summary & Credentials */}
-                  <div className="p-5 sm:p-6 space-y-4">
-                    <p className="text-xs text-[#C8C4B8] leading-relaxed line-clamp-3">
-                      {partner.shortBio}
+                    {/* Partner Name */}
+                    <h3
+                      className="text-lg sm:text-xl text-[#111110] font-semibold mb-0.5 group-hover:text-[#111110] transition-colors"
+                      style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontWeight: 600 }}
+                    >
+                      {partner.name}
+                    </h3>
+
+                    {/* Court Designation */}
+                    <p className="text-[0.62rem] tracking-[0.12em] uppercase text-[#8B7355] font-semibold mb-2.5">
+                      {partner.designation}
                     </p>
 
-                    <div className="border-t border-white/10 pt-3 space-y-1.5">
-                      <p className="text-[0.58rem] tracking-[0.18em] uppercase text-[#8A8780] font-semibold">
-                        Court Admissions
-                      </p>
-                      {partner.admissions.slice(0, 2).map((adm, i) => (
-                        <p key={i} className="text-[0.72rem] text-[#E5DFD3] leading-tight">
-                          · {adm}
-                        </p>
-                      ))}
-                    </div>
+                    {/* Bio Snippet — Compact 2 Lines */}
+                    <p className="text-[0.75rem] text-[#5C5A54] leading-relaxed line-clamp-2 mb-3">
+                      {partner.shortBio}
+                    </p>
                   </div>
-                </div>
 
-                {/* Card Action Link */}
-                <div className="p-5 sm:p-6 pt-0 border-t border-white/10 mt-2">
-                  <div className="pt-4 flex items-center justify-between">
+                  {/* Bottom: Link */}
+                  <div className="pt-2.5 border-t border-[rgba(17,17,16,0.08)] flex items-center justify-between">
                     <Link
                       href={`/attorneys/${partner.slug}`}
-                      className="inline-flex items-center gap-1.5 text-xs text-[#FAF8F4] hover:text-[#8B7355] uppercase tracking-wider font-medium transition-colors"
+                      className="text-[0.68rem] uppercase tracking-wider text-[#111110] hover:text-[#8B7355] inline-flex items-center gap-1 transition-colors font-semibold"
                     >
-                      <span>View Full Profile</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
+                      <span>View Profile</span>
+                      <ArrowRight className="w-3 h-3" />
                     </Link>
                     <Link
                       href={`/contact?attorney=${encodeURIComponent(partner.name)}`}
-                      className="text-[0.65rem] uppercase tracking-wider text-[#8B7355] hover:text-[#FAF8F4] transition-colors"
+                      className="text-[0.62rem] uppercase tracking-wider text-[#8B7355] hover:text-[#111110] transition-colors font-medium"
                     >
                       Consult →
                     </Link>
@@ -806,13 +819,14 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="pt-10 text-center border-t border-white/10 mt-10">
+          {/* Dedicated Animated Main Action */}
+          <div className="pt-12 text-center">
             <Link
               href="/teams"
-              className="inline-flex items-center gap-2.5 px-7 py-3 bg-[#FAF8F4] text-[#06231B] hover:bg-[#EFECE3] font-semibold text-xs tracking-[0.18em] uppercase transition-colors duration-200 shadow-md"
+              className="group inline-flex items-center gap-3 px-8 py-4 bg-[#111110] text-[#FAF8F4] hover:bg-[#2A2825] font-bold text-xs sm:text-sm tracking-[0.2em] uppercase transition-all duration-300 shadow-md hover:shadow-lg hover:scale-[1.01]"
             >
-              <span>View Full Chamber Roster &amp; Associates</span>
-              <ArrowRight className="w-4 h-4" />
+              <span>Explore Our Leadership &amp; Team</span>
+              <ArrowRight className="w-4 h-4 text-[#8B7355] transition-transform duration-300 group-hover:translate-x-1.5" />
             </Link>
           </div>
         </div>

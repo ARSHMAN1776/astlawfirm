@@ -28,8 +28,8 @@ export const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#F7F5EF]/98 backdrop-blur-md shadow-[0_1px_0_rgba(17,17,16,0.08)] py-3"
-          : "bg-[#F7F5EF] border-b border-[rgba(17,17,16,0.10)] py-4 sm:py-5"
+          ? "bg-[#F7F5EF]/98 backdrop-blur-md shadow-[0_1px_0_rgba(17,17,16,0.08)] py-2"
+          : "bg-[#F7F5EF] border-b border-[rgba(17,17,16,0.10)] py-2.5 sm:py-3"
       }`}
     >
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 flex items-center justify-between gap-2 lg:gap-4">
