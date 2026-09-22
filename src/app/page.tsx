@@ -72,7 +72,6 @@ export default function HomePage() {
             fill
             className="object-cover"
             style={{ objectPosition: "center 40%" }}
-            priority
             sizes="100vw"
           />
           <div
