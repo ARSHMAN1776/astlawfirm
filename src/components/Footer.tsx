@@ -147,7 +147,7 @@ export const Footer: React.FC = () => {
                 <MapPin className="w-3 h-3 flex-shrink-0 text-white/25 mt-0.5" />
                 <div className="space-y-0.5">
                   <p className="text-[0.7rem] font-semibold text-white/80 tracking-wide">
-                    1. Islamabad Chambers
+                    AST LAW FIRM ISLAMABAD
                   </p>
                   <p className="text-[0.62rem] text-white/35 leading-relaxed">
                     Flat No.1, Barrister Arcade, Opp. Family Courts Complex, G 10/1, Islamabad
@@ -160,11 +160,29 @@ export const Footer: React.FC = () => {
                 <MapPin className="w-3 h-3 flex-shrink-0 text-white/25 mt-0.5" />
                 <div className="space-y-0.5">
                   <p className="text-[0.7rem] font-semibold text-white/80 tracking-wide">
-                    2. Abbottabad Office
+                    AST LAW FIRM ABBOTTABAD
                   </p>
                   <p className="text-[0.62rem] text-white/35 leading-relaxed">
                     Office No. 44 &amp; 45, Sherpao Lawyers Plaza, Near District Bar Room, Abbottabad
                   </p>
+                </div>
+              </div>
+
+              {/* Office 3 */}
+              <div className="flex items-start gap-2.5">
+                <MapPin className="w-3 h-3 flex-shrink-0 text-white/25 mt-0.5" />
+                <div className="space-y-0.5">
+                  <p className="text-[0.7rem] font-semibold text-white/80 tracking-wide">
+                    AST LAW FIRM KARACHI
+                  </p>
+                  <a
+                    href={siteConfig.contact.offices[2].mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-[0.62rem] text-white/35 leading-relaxed hover:text-white/70 transition-colors"
+                  >
+                    Room # 13, 2nd Floor, Namco Centre, Campbell Street, Karachi
+                  </a>
                 </div>
               </div>
 
@@ -194,7 +212,7 @@ export const Footer: React.FC = () => {
                   <Clock className="w-3 h-3 flex-shrink-0 text-white/25" />
                   <span className="text-[0.6rem] text-white/30">Hours:</span>
                   <span className="text-[0.62rem] text-white/45">
-                    10:00 AM to 5:00 PM (Mon – Fri)
+                    9:00 AM to 5:00 PM (Mon – Fri)
                   </span>
                 </div>
               </div>

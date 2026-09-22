@@ -105,7 +105,7 @@ export default function ContactPage() {
                       </span>
                     </div>
                     <p className="text-[#111110] text-xs font-semibold uppercase tracking-wider">
-                      Ahmed Sabir Tanoli / AST Law Firm
+                      {contact.offices[0].name}
                     </p>
                     <p className="text-[#33312E] text-xs sm:text-sm leading-relaxed">
                       Flat No. 1, Barrister Arcade, Opposite Family Courts Complex, G 10/1, Islamabad
@@ -140,7 +140,7 @@ export default function ContactPage() {
                       </span>
                     </div>
                     <p className="text-[#111110] text-xs font-semibold uppercase tracking-wider">
-                      AST Law Firm — Abbottabad Chambers
+                      {contact.offices[1].name}
                     </p>
                     <p className="text-[#33312E] text-xs sm:text-sm leading-relaxed">
                       Office No. 44 &amp; 45, Sherpao Lawyers Plaza, Near District Bar Room, Abbottabad
@@ -148,6 +148,41 @@ export default function ContactPage() {
                     <div className="pt-1.5">
                       <a
                         href={contact.offices[1].mapUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#06231B] hover:bg-[#0A3328] text-[#F7F5EF] text-[0.62rem] tracking-[0.16em] uppercase font-semibold transition-all duration-200 shadow-xs group/btn"
+                      >
+                        <MapPin className="w-3 h-3 text-[#8B7355]" />
+                        <span>Google Maps Location</span>
+                        <ArrowUpRight className="w-3 h-3 text-[#8B7355] transition-transform duration-200 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Office 3 — Karachi */}
+                <div className="flex items-start gap-4 p-4 bg-[#FAF8F3] border border-[rgba(17,17,16,0.08)] relative group hover:border-[#8B7355]/40 transition-all duration-200">
+                  <div className="w-10 h-10 border border-[rgba(17,17,16,0.12)] bg-[#EFECE3] flex items-center justify-center flex-shrink-0 text-[#111110]">
+                    <MapPin className="w-4 h-4 text-[#8B7355]" />
+                  </div>
+                  <div className="space-y-1.5 flex-1">
+                    <div className="flex items-center justify-between flex-wrap gap-2">
+                      <span className="text-[0.62rem] tracking-[0.2em] uppercase text-[#8B7355] font-semibold">
+                        Karachi Chamber
+                      </span>
+                      <span className="text-[0.55rem] tracking-wider uppercase px-1.5 py-0.5 bg-[#06231B] text-[#F7F5EF] font-mono">
+                        Office 3
+                      </span>
+                    </div>
+                    <p className="text-[#111110] text-xs font-semibold uppercase tracking-wider">
+                      {contact.offices[2].name}
+                    </p>
+                    <p className="text-[#33312E] text-xs sm:text-sm leading-relaxed">
+                      Room # 13, 2nd Floor, Namco Centre, Campbell Street, Karachi
+                    </p>
+                    <div className="pt-1.5">
+                      <a
+                        href={contact.offices[2].mapUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#06231B] hover:bg-[#0A3328] text-[#F7F5EF] text-[0.62rem] tracking-[0.16em] uppercase font-semibold transition-all duration-200 shadow-xs group/btn"
@@ -210,7 +245,7 @@ export default function ContactPage() {
                       Office Hours
                     </h3>
                     <p className="text-[#111110] text-sm font-medium">
-                      10:00 AM to 5:00 PM (Monday to Friday)
+                      {contact.hours}
                     </p>
                     <p className="text-[#8A8780] text-xs">
                       Closed on Weekends &amp; Court Holidays
@@ -296,7 +331,7 @@ export default function ContactPage() {
               </h2>
             </div>
             <p className="text-[#5C5A54] text-xs sm:text-sm max-w-md">
-              Direct navigation links to AST Law Firm chambers in Islamabad and Abbottabad. Click below to open verified location in Google Maps.
+              Direct navigation links to AST Law Firm chambers and offices. Click below to open a location in Google Maps.
             </p>
           </div>
 
