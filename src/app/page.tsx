@@ -472,7 +472,7 @@ export default function HomePage() {
                   src="/desk-pakistan.jpg"
                   alt="AST Law Firm — Chambers & Legal Research"
                   fill
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
+                  className="object-cover object-left transition-transform duration-500 group-hover:scale-[1.02]"
                   sizes="(max-width: 768px) 95vw, 500px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
@@ -897,49 +897,150 @@ export default function HomePage() {
 
 
       {/* ═══════════════════════════════════════════════════════
-          9. FINAL EXECUTIVE CTA & DIRECT CONSULTATION
+          9. FINAL EXECUTIVE CTA & CHAMBER STANDARD
       ═══════════════════════════════════════════════════════ */}
-      <section className="bg-[#EFECE3] border-t border-[rgba(17,17,16,0.10)] py-18 sm:py-24 lg:py-28">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 text-center">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="w-10 h-[1px] bg-[#8B7355]" />
-            <span className="text-[0.62rem] sm:text-xs tracking-[0.3em] uppercase text-[#8B7355] font-semibold">
-              Retain Legal Counsel
-            </span>
-            <span className="w-10 h-[1px] bg-[#8B7355]" />
-          </div>
+      <section className="bg-gradient-to-b from-[#F7F5EF] via-[#EFECE3] to-[#E8E3D6] border-t border-[rgba(17,17,16,0.12)] py-16 sm:py-24 lg:py-28 relative overflow-hidden">
+        {/* Subtle background ambient watermark */}
+        <div className="absolute -right-20 -bottom-20 w-96 h-96 opacity-[0.03] pointer-events-none select-none">
+          <Image src="/branding/ast-monogram-exact.png" alt="" fill className="object-contain" />
+        </div>
 
-          <h2
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#111110] mb-5 leading-tight"
-            style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontWeight: 400 }}
-          >
-            Discuss Your Legal Matter With AST Law Firm
-          </h2>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
 
-          <p className="text-xs sm:text-sm md:text-base text-[#5C5A54] max-w-2xl mx-auto leading-relaxed mb-8">
-            Whether you require high-stakes litigation, corporate advisory, contract documentation, or legal representation before the superior courts of Pakistan, our partners provide seasoned counsel.
-          </p>
+            {/* Left Column (5 Cols) — Official Chamber Standard Framed Showcase */}
+            <div className="lg:col-span-5">
+              <div className="relative bg-[#FAF8F4] p-3 sm:p-4 border border-[rgba(17,17,16,0.14)] shadow-[0_12px_36px_rgba(17,17,16,0.08)]">
+                {/* Antique Gold Corner Accents */}
+                <div className="absolute top-2 left-2 text-[0.65rem] text-[#8B7355]/60 select-none font-serif">┌</div>
+                <div className="absolute top-2 right-2 text-[0.65rem] text-[#8B7355]/60 select-none font-serif">┐</div>
+                <div className="absolute bottom-2 left-2 text-[0.65rem] text-[#8B7355]/60 select-none font-serif">└</div>
+                <div className="absolute bottom-2 right-2 text-[0.65rem] text-[#8B7355]/60 select-none font-serif">┘</div>
 
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <a
-              href={getWhatsAppUrl("Hello AST Law Firm, I would like to schedule a consultation regarding a legal matter.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#06231B] text-[#F7F5EF] hover:bg-[#0A3328] text-xs uppercase tracking-widest font-semibold transition-all duration-200 shadow-md"
-            >
-              <div className="w-5 h-5 rounded-full bg-[#25D366] text-white flex items-center justify-center flex-shrink-0">
-                <MessageCircle className="w-3.5 h-3.5 fill-current text-white" />
+                {/* Top Badge Strip */}
+                <div className="flex items-center justify-between pb-3 px-1 border-b border-[rgba(17,17,16,0.08)] mb-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-7 h-7 border border-[#8B7355]/40 bg-[#FAF8F3] flex items-center justify-center p-1 shadow-sm">
+                      <Image src="/branding/ast-monogram-exact.png" alt="AST Crest" width={18} height={18} className="object-contain" />
+                    </div>
+                    <span className="text-[0.62rem] tracking-[0.2em] uppercase font-semibold text-[#06231B]">
+                      AST Law Firm
+                    </span>
+                  </div>
+                  <span className="font-mono text-[0.55rem] tracking-[0.18em] uppercase px-2 py-0.5 bg-[#06231B] text-[#FAF8F4] font-semibold">
+                    OFFICIAL STANDARD
+                  </span>
+                </div>
+
+                {/* The Flag Image */}
+                <div className="relative aspect-[5/4] w-full overflow-hidden border border-[rgba(17,17,16,0.10)] bg-[#EAE6DC] group">
+                  <Image
+                    src="/ast-pakistan-flags.png"
+                    alt="AST Law Firm Official Chamber Flag with Pakistan National Flag"
+                    fill
+                    className="object-cover object-center filter contrast-[1.02] transition-transform duration-700 group-hover:scale-[1.02]"
+                    sizes="(max-width: 1024px) 95vw, 480px"
+                  />
+                  {/* Subtle vignette overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none" />
+                </div>
+
+                {/* Bottom Caption Strip */}
+                <div className="pt-3 px-1 mt-3 border-t border-[rgba(17,17,16,0.08)] flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#8B7355]" />
+                    <span className="text-[0.64rem] tracking-[0.16em] uppercase text-[#111110] font-bold">
+                      Chamber Standard &amp; National Bar
+                    </span>
+                  </div>
+                  <span className="text-[0.58rem] tracking-[0.14em] uppercase text-[#8A8780] font-mono">
+                    Est. 1992
+                  </span>
+                </div>
               </div>
-              <span>Chat on WhatsApp · 0315 6559995</span>
-            </a>
+            </div>
 
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-7 py-3.5 border border-[#111110]/30 hover:border-[#111110] bg-transparent text-[#111110] text-xs uppercase tracking-widest font-semibold transition-colors"
-            >
-              <span>Schedule Formal Consultation</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
+            {/* Right Column (7 Cols) — Executive Consultation & Retainer Details */}
+            <div className="lg:col-span-7 space-y-6">
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="w-6 h-[1.5px] bg-[#8B7355]" />
+                  <span className="text-[0.65rem] sm:text-xs tracking-[0.28em] uppercase text-[#8B7355] font-semibold">
+                    Retain Legal Counsel
+                  </span>
+                </div>
+                <h2
+                  className="text-3xl sm:text-4xl lg:text-5xl text-[#111110] tracking-tight leading-[1.15]"
+                  style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontWeight: 400 }}
+                >
+                  Discuss Your Legal Matter With AST Law Firm
+                </h2>
+              </div>
+
+              <p className="text-xs sm:text-sm md:text-base text-[#5C5A54] leading-relaxed">
+                Carrying forward a founding legacy established in 1992 by Haji Sabir Hussain Tanoli (Advocate Supreme Court) and consolidated under Ahmed Hussain Tanoli (Advocate High Court), AST Law Firm counsels corporate enterprises, financial institutions, and private clients across superior appellate benches and regional subordinate courts.
+              </p>
+
+              {/* 3 Jurisdictional Pillars */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 py-2 border-y border-[rgba(17,17,16,0.10)]">
+                <div className="space-y-1">
+                  <span className="block text-xs uppercase tracking-wider text-[#06231B] font-bold">
+                    Supreme Court
+                  </span>
+                  <span className="text-[0.68rem] text-[#8A8780] block">
+                    Apex Appellate Advocacy
+                  </span>
+                </div>
+                <div className="space-y-1">
+                  <span className="block text-xs uppercase tracking-wider text-[#06231B] font-bold">
+                    3 Provinces
+                  </span>
+                  <span className="text-[0.68rem] text-[#8A8780] block">
+                    ICT · KPK · Sindh Presence
+                  </span>
+                </div>
+                <div className="space-y-1">
+                  <span className="block text-xs uppercase tracking-wider text-[#06231B] font-bold">
+                    Privileged
+                  </span>
+                  <span className="text-[0.68rem] text-[#8A8780] block">
+                    Strict Confidentiality
+                  </span>
+                </div>
+              </div>
+
+              {/* Direct Actions */}
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <a
+                  href={getWhatsAppUrl("Hello AST Law Firm, I would like to schedule a consultation regarding a legal matter.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-[#06231B] text-[#F7F5EF] hover:bg-[#0A3328] text-xs uppercase tracking-widest font-semibold transition-all duration-200 shadow-md"
+                >
+                  <div className="w-5 h-5 rounded-full bg-[#25D366] text-white flex items-center justify-center flex-shrink-0">
+                    <MessageCircle className="w-3.5 h-3.5 fill-current text-white" />
+                  </div>
+                  <span>Chat on WhatsApp · 0315 6559995</span>
+                </a>
+
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 border border-[#111110]/40 hover:border-[#111110] bg-white/70 hover:bg-white text-[#111110] text-xs uppercase tracking-widest font-semibold transition-colors shadow-sm"
+                >
+                  <span>Schedule Consultation</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+
+                <a
+                  href="tel:0512352396"
+                  className="inline-flex items-center gap-2 px-4 py-3.5 text-[#5C5A54] hover:text-[#06231B] text-xs uppercase tracking-widest font-medium transition-colors"
+                >
+                  <Phone className="w-3.5 h-3.5 text-[#8B7355]" />
+                  <span>051-2352396</span>
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

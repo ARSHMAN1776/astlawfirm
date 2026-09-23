@@ -180,7 +180,7 @@ export default function LegacyPage() {
                     src="/desk-pakistan.jpg"
                     alt="AST Law Firm — Chambers Archival Research"
                     fill
-                    className="object-cover object-center"
+                    className="object-cover object-left"
                     sizes="320px"
                   />
                 </div>
