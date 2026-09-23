@@ -37,8 +37,10 @@ export const siteConfig = {
     whatsappDisplay: "+92 315 6559995",
     phone: "0315 6559995",
     phoneDisplay: "0315 6559995",
+    landline: "051 2352396",
+    landlineDisplay: "051-2352396",
     email: "contact@astlawfirms.com",
-    hours: "9:00 AM – 5:00 PM (Monday to Friday)",
+    hours: "9:00 AM – 7:00 PM (Monday to Saturday)",
     officeAddress: "Flat No. 1, Barrister Arcade, Opposite Family Courts Complex, G 10/1, Islamabad",
     offices: [
       {
@@ -46,6 +48,8 @@ export const siteConfig = {
         name: "AST LAW FIRM ISLAMABAD",
         address: "Flat No. 1, Barrister Arcade, Opposite Family Courts Complex, G 10/1, Islamabad",
         detail: "Islamabad Principal Chambers",
+        phone: "0315 6559995",
+        landline: "051-2352396",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Flat+No.+1%2C+Barrister+Arcade%2C+Opposite+Family+Courts+Complex%2C+G+10%2F1%2C+Islamabad",
       },
       {

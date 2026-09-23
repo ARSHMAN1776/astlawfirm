@@ -76,7 +76,9 @@ export const attorneys: Attorney[] = [
     ],
     practiceAreas: [
       "Corporate & Commercial Advisory",
-      "High Court Trial & Appellate Advocacy",
+      "High Court & Appellate Advocacy",
+      "ADR (Alternate Dispute Resolution)",
+      "Tax Advisory & Revenue Jurisprudence",
       "Banking & Financial Dispute Resolution",
       "Contract Drafting & Documentation",
       "Civil & Constitutional Representation",
@@ -84,6 +86,7 @@ export const attorneys: Attorney[] = [
     admissions: [
       "Advocate, High Courts of Pakistan",
       "Islamabad Bar Council Registered Practitioner",
+      "KPK Bar Council Registered Practitioner",
       "District & Subordinate Courts of Pakistan",
     ],
     education: [
@@ -92,7 +95,8 @@ export const attorneys: Attorney[] = [
       "Commercial Drafting & Regulatory Jurisprudence",
     ],
     memberships: [
-      "High Court Bar Association",
+      "High Court Bar Association, Abbottabad",
+      "District Bar Association, Abbottabad",
       "Islamabad Bar Association (IBA)",
       "Managing Partner, AST Law Firm Chambers",
     ],
@@ -113,10 +117,11 @@ export const attorneys: Attorney[] = [
       "Muhammad Javed Khan Tanoli is a Partner and Corporate Counsel at AST Law Firm, leading the firm's Karachi and Sindh legal practice.",
       "As Advocate High Court of Sindh (Karachi), he counsels corporate enterprises, financial institutions, and private clients on high-value commercial transactions, regulatory frameworks, and superior court dispute resolution.",
       "With seasoned courtroom advocacy and transactional experience before the High Court of Sindh and specialized tribunals, he provides strategic counsel across banking, commercial contracts, civil law, and corporate governance.",
-      "He plays an essential role in AST Law Firm's nationwide presence, bridging client matters across Karachi's financial center, Islamabad's principal chambers, and appellate forums.",
+      "He manages the firm's legal practice and superior court litigation exclusively within Karachi and Sindh, providing dedicated client representation before the High Court of Sindh, appellate benches, and provincial judicial forums.",
     ],
     practiceAreas: [
       "Corporate & Commercial Advisory",
+      "Taxation & Fiscal Advisory (FBR & SRB)",
       "High Court Trial & Appellate Advocacy (Sindh)",
       "Banking & Financial Dispute Resolution",
       "Corporate Governance & Regulatory Compliance",
@@ -125,7 +130,7 @@ export const attorneys: Attorney[] = [
     admissions: [
       "Advocate, High Court of Sindh",
       "Sindh Bar Council Registered Practitioner",
-      "Karachi Bar Association & Subordinate Courts",
+      "Karachi Bar Association & Subordinate Courts (Sindh)",
     ],
     education: [
       "Bachelor of Laws (LL.B)",
@@ -135,7 +140,51 @@ export const attorneys: Attorney[] = [
     memberships: [
       "Sindh High Court Bar Association (SHCBA)",
       "Karachi Bar Association (KBA)",
-      "Partner & Corporate Counsel, AST Law Firm",
+      "Partner & Corporate Counsel, AST Law Firm (Karachi)",
+    ],
+    publications: [],
+  },
+  {
+    // ─── Partner / Head of Abbottabad Office (Hazara Division) ────
+    slug: "muhammad-amjad-hussain-tanoli",
+    name: "Muhammad Amjad Hussain Tanoli",
+    image: "/amjad-tanoli-portrait.jpg",
+    designation: "Advocate High Court",
+    role: "Partner / Abbottabad Office & Hazara Division",
+    descriptor: "ADVOCATE HIGH COURT · ABBOTTABAD & ISLAMABAD",
+    isFounder: false,
+    shortBio:
+      "Partner and Head of Abbottabad Office (Hazara Division) at AST Law Firm. Advocate High Court. Holds an LL.B, M.Sc in Economics, and a Bachelor in Accounting & Finance from Australia, specializing in complex financial matters, banking disputes, corporate advisory, and superior court litigation across Hazara Division and Islamabad.",
+    biography: [
+      "Muhammad Amjad Hussain Tanoli is a Partner at AST Law Firm and leads the firm's Abbottabad Office and Hazara Division legal practice, maintaining an active superior court practice extending into Islamabad.",
+      "He brings a distinguished interdisciplinary background to legal practice, holding a Bachelor of Laws (LL.B), a Master of Science (M.Sc) in Economics, and a Bachelor in Accounting and Finance from Australia.",
+      "As an authority on financial matters and banking disputes, he advises corporate entities, commercial clients, and private litigants on high-stakes fiscal controversies, balance sheet examinations, and regulatory compliance.",
+      "With extensive courtroom experience across High Courts and subordinate judiciaries throughout the Hazara Division, he seamlessly coordinates regional matters with the firm's principal Islamabad chambers.",
+    ],
+    practiceAreas: [
+      "Financial Matters & Banking Jurisprudence",
+      "Corporate & Commercial Advisory",
+      "Accounting & Fiscal Dispute Advisory",
+      "High Court & Appellate Advocacy",
+      "Land Acquisition & Revenue Litigation",
+      "Civil & Constitutional Representation",
+      "Islamabad & Regional Inter-Chamber Liaison",
+    ],
+    admissions: [
+      "Advocate, High Courts of Pakistan",
+      "KPK Bar Council Registered Practitioner (BC-17-1527)",
+      "High Court & Subordinate Courts (Hazara Division)",
+      "Islamabad Principal Chambers & Superior Court Practice",
+    ],
+    education: [
+      "Bachelor of Laws (LL.B)",
+      "M.Sc in Economics",
+      "Bachelor in Accounting and Finance (Australia)",
+    ],
+    memberships: [
+      "High Court Bar Association, Abbottabad",
+      "District Bar Association, Abbottabad",
+      "Partner, AST Law Firm Chambers",
     ],
     publications: [],
   },

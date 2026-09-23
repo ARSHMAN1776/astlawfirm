@@ -190,12 +190,22 @@ export const Footer: React.FC = () => {
               <div className="pt-2 border-t border-white/[0.07] space-y-2">
                 <div className="flex items-center gap-2.5">
                   <Phone className="w-3 h-3 flex-shrink-0 text-white/25" />
-                  <span className="text-[0.6rem] text-white/30">Phone:</span>
+                  <span className="text-[0.6rem] text-white/30">Mobile:</span>
                   <a
                     href="tel:03156559995"
                     className="text-[0.62rem] text-white/60 hover:text-white transition-colors font-mono"
                   >
-                    0311 5559995
+                    0315 6559995
+                  </a>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Phone className="w-3 h-3 flex-shrink-0 text-white/25" />
+                  <span className="text-[0.6rem] text-white/30">Landline:</span>
+                  <a
+                    href="tel:0512352396"
+                    className="text-[0.62rem] text-white/60 hover:text-white transition-colors font-mono"
+                  >
+                    051-2352396
                   </a>
                 </div>
                 <div className="flex items-center gap-2.5">
@@ -212,7 +222,7 @@ export const Footer: React.FC = () => {
                   <Clock className="w-3 h-3 flex-shrink-0 text-white/25" />
                   <span className="text-[0.6rem] text-white/30">Hours:</span>
                   <span className="text-[0.62rem] text-white/45">
-                    9:00 AM to 5:00 PM (Mon – Fri)
+                    9:00 AM to 7:00 PM (Mon – Sat)
                   </span>
                 </div>
               </div>

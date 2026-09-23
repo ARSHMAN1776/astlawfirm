@@ -431,7 +431,7 @@ export default function HomePage() {
                       AST LAW FIRM
                     </h4>
                     <p className="text-xs sm:text-[0.8rem] text-[#5C5A54] leading-relaxed">
-                      Consolidated under <strong className="text-[#111110] font-medium">Ahmed Hussain Tanoli</strong> &amp; <strong className="text-[#111110] font-medium">Muhammad Javed Khan Tanoli</strong>, unifying senior Supreme Court advocacy with corporate counseling.
+                      Consolidated under <strong className="text-[#111110] font-medium">Haji Sabir Hussain Tanoli</strong> &amp; <strong className="text-[#111110] font-medium">Ahmed Hussain Tanoli</strong>, unifying senior Supreme Court advocacy with corporate counseling.
                     </p>
                   </div>
                 </div>
@@ -535,13 +535,13 @@ export default function HomePage() {
               <div className="bg-[#FAF8F3] border border-[rgba(17,17,16,0.10)] p-4 flex flex-col justify-between min-h-[92px]">
                 <div className="flex items-center justify-between mb-1">
                   <span className="text-xl sm:text-2xl font-serif text-[#06231B] font-semibold" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
-                    3 Cities
+                    3 Provinces
                   </span>
                   <Building2 className="w-4 h-4 text-[#8B7355]" />
                 </div>
                 <div>
-                  <p className="text-[0.62rem] tracking-[0.16em] uppercase text-[#111110] font-bold">Chambers Network</p>
-                  <p className="text-[0.58rem] text-[#8A8780] mt-0.5">Islamabad · Karachi · Abbottabad</p>
+                  <p className="text-[0.62rem] tracking-[0.16em] uppercase text-[#111110] font-bold">Jurisdictional Footprint</p>
+                  <p className="text-[0.58rem] text-[#8A8780] mt-0.5">Islamabad (ICT) · KPK · Sindh</p>
                 </div>
               </div>
             </div>
@@ -741,8 +741,8 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* 3 Animated Sleek Partner Cards (Compact Size) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 pt-6">
+          {/* 4 Animated Sleek Partner Cards (Compact Size) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 pt-6">
             {attorneys.map((partner, idx) => (
               <div
                 key={partner.slug}

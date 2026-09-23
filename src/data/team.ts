@@ -18,12 +18,12 @@ export interface SupportStaff {
 
 export const seniorAssociates: TeamMember[] = [
   {
-    name: "Muhammad Amjad Hussain Tanoli",
+    name: "Hareem Shahnawaz",
     designation: "Advocate High Court",
     association: "Senior Associate / Lawyer",
-    licenseNo: "BC-17-1527",
+    licenseNo: "BC-24-7849",
     court: "High Court & Subordinate Courts",
-    image: "/team/muhammad-amjad-hussain.jpg",
+    image: "/team/hareem-shahnawaz.jpg",
   },
   {
     name: "Seemab Nayyer",
@@ -31,6 +31,7 @@ export const seniorAssociates: TeamMember[] = [
     association: "Senior Associate / Lawyer",
     licenseNo: "BC-19-1180",
     court: "High Court & Subordinate Courts",
+    image: "/team/seemab-nayyer.jpg",
   },
   {
     name: "Ayesha Sheraz Abbasi",
@@ -38,14 +39,14 @@ export const seniorAssociates: TeamMember[] = [
     association: "Senior Associate / Lawyer",
     licenseNo: "BC-14-5112",
     court: "High Court & Subordinate Courts",
+    image: "/team/ayesha-sheraz-abbasi.jpg",
   },
   {
-    name: "Shoaib Ahmed Awan",
+    name: "Qaiser Hussain Shah",
     designation: "Advocate High Court",
     association: "Senior Associate / Lawyer",
-    licenseNo: "BC-18-1425",
     court: "High Court & Subordinate Courts",
-    image: "/team/shoaib-ahmed-awan.jpg",
+    image: "/team/qaiser-hussain-shah.jpg",
   },
   {
     name: "Hafiz Gulfaraz Awan",
@@ -56,22 +57,16 @@ export const seniorAssociates: TeamMember[] = [
     image: "/team/hafiz-gulfaraz-awan.jpg",
   },
   {
-    name: "Qaiser Hussain Shah",
+    name: "Shoaib Ahmed Awan",
     designation: "Advocate High Court",
     association: "Senior Associate / Lawyer",
+    licenseNo: "BC-18-1425",
     court: "High Court & Subordinate Courts",
-    image: "/team/qaiser-hussain-shah.jpg",
+    image: "/team/shoaib-ahmed-awan.jpg",
   },
 ];
 
 export const associates: TeamMember[] = [
-  {
-    name: "Hareem Shahnawaz",
-    designation: "Advocate",
-    association: "Associate / Lawyer",
-    licenseNo: "BC-24-7849",
-    court: "District & Subordinate Courts",
-  },
   {
     name: "Umer Gul Khan",
     designation: "Advocate",

@@ -50,6 +50,21 @@ const timelineEras = [
     ],
   },
   {
+    year: "2020",
+    period: "Major Infrastructure & Corporate Retainers",
+    title: "Hydroelectric Projects, Institutional Advisories & High Court Litigation",
+    summary:
+      "A period marked by high-value infrastructure counsel, landmark land acquisition proceedings, and ongoing institutional retainers across regional and superior courts. Entrusted with critical project advisories and comprehensive litigation before the Peshawar High Court (Abbottabad Bench), district courts of Mansehra and Balakot, and specialized labor tribunals.",
+    highlights: [
+      "SK Hydro Power Project at Naran — Comprehensive legal advisories and full litigation covering Mansehra & Balakot civil matters, and Peshawar High Court Abbottabad Bench",
+      "Land Acquisition Matters — 100% success results in land acquisition disputes and compensation claims",
+      "Hazara University Mansehra — Continued standing legal advisory & institutional representation",
+      "AUFT — Retained legal advisory services and service/employment matters",
+      "HRSG (House Source Company based in Islamabad) — Retained legal matters related to Labour Courts and Peshawar High Court Abbottabad Bench",
+      "East and West Company — Strategic litigation and legal representation in Peshawar High Court Abbottabad Bench",
+    ],
+  },
+  {
     year: "2026",
     period: "Unification & Future Direction",
     title: "The Strategic Merger: AST Law Firm",
@@ -58,7 +73,7 @@ const timelineEras = [
     highlights: [
       "Formal brand consolidation: AST Law Firm — Ahmed Sabir Tanoli",
       "Executive management led by Ahmed Hussain Tanoli, Advocate High Court",
-      "Coordinated chambers in Islamabad (Barrister Arcade, G 10/1) and Abbottabad",
+      "Coordinated chambers across Islamabad (Barrister Arcade, G 10/1), Abbottabad (KPK), and Karachi",
     ],
   },
 ];

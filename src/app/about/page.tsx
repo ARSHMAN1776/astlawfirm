@@ -73,7 +73,7 @@ export default function AboutPage() {
                 </h2>
               </div>
               <p className="text-[#5C5A54] text-sm sm:text-base leading-relaxed">
-                AST Law Firm carries forward a distinguished courtroom tradition founded in 1992 by Haji Sabir Hussain Tanoli, Advocate Supreme Court of Pakistan, through Tanawal Law Associates (TLA).
+                AST Law Firm carries forward a distinguished courtroom tradition founded in 1992 by Haji Sabir Hussain Tanoli, Advocate Supreme Court of Pakistan, through Tanawal Law Associates (TLA), alongside Co-Founder &amp; Managing Partner Ahmed Hussain Tanoli, Advocate High Court.
               </p>
               <div className="pt-2">
                 <Link
@@ -141,6 +141,11 @@ export default function AboutPage() {
                   <p className="text-[0.62rem] tracking-[0.22em] uppercase text-[#8A8780] mb-1">Founded by</p>
                   <p className="text-base text-[#111110] font-medium">{principals.founder.name}</p>
                   <p className="text-xs text-[#5C5A54]">{principals.founder.designation}</p>
+                </div>
+                <div>
+                  <p className="text-[0.62rem] tracking-[0.22em] uppercase text-[#8A8780] mb-1">Co-Founder</p>
+                  <p className="text-base text-[#111110] font-medium">{principals.coFounder.name}</p>
+                  <p className="text-xs text-[#5C5A54]">{principals.coFounder.designation}</p>
                 </div>
                 <div className="pt-2">
                   <p className="text-[0.62rem] tracking-[0.22em] uppercase text-[#8A8780] mb-1">Present Identity</p>

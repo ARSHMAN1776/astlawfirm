@@ -41,7 +41,7 @@ export default function TeamsPage() {
           </h1>
 
           <p className="text-[#5C5A54] text-base sm:text-lg max-w-3xl font-normal leading-relaxed">
-            AST Law Firm brings together experienced legal leadership, seasoned High Court Advocates, qualified associates, and judicial chamber clerks working seamlessly across superior and subordinate courts in Pakistan.
+            AST Law Firm brings together experienced legal leadership, seasoned High Court Advocates, Supreme Court counsel, qualified associates, and judicial chamber clerks working seamlessly across superior and subordinate courts in Pakistan.
           </p>
 
           {/* Quick Metrics Bar */}
@@ -393,7 +393,13 @@ export default function TeamsPage() {
               href="tel:03156559995"
               className="inline-flex items-center gap-2 px-6 py-4 border border-[rgba(17,17,16,0.2)] text-[#111110] hover:bg-[#111110]/5 text-[0.7rem] tracking-[0.16em] uppercase transition-colors font-medium font-mono"
             >
-              Direct: 0315 6559995
+              Mobile: 0315 6559995
+            </a>
+            <a
+              href="tel:0512352396"
+              className="inline-flex items-center gap-2 px-6 py-4 border border-[rgba(17,17,16,0.2)] text-[#111110] hover:bg-[#111110]/5 text-[0.7rem] tracking-[0.16em] uppercase transition-colors font-medium font-mono"
+            >
+              Landline: 051-2352396
             </a>
           </div>
         </div>

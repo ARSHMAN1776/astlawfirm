@@ -300,7 +300,7 @@ export const practiceAreas: PracticeArea[] = [
     tagline: "Dedicated appellate representation before High Courts and the Supreme Court of Pakistan.",
     summary: "Senior appellate advocacy, constitutional law, judicial reviews, and regulatory appellate tribunals.",
     overview:
-      "AST Law Firm provides dedicated senior legal representation before the highest judicial forums of Pakistan. Led by Founder & Senior Partner Haji Sabir Hussain Tanoli (Advocate Supreme Court of Pakistan) and Co-Founder & Managing Partner Ahmed Hussain Tanoli (Advocate High Court), our chambers handle critical matters requiring exceptional legal intellect and courtroom presence. We represent clients across High Court Benches (Islamabad, Rawalpindi, Peshawar, Lahore) and the Supreme Court of Pakistan in constitutional, appellate, and public interest litigation.",
+      "AST Law Firm provides dedicated senior legal representation before the highest judicial forums of Pakistan. Led by Founder & Senior Partner Haji Sabir Hussain Tanoli (Advocate Supreme Court of Pakistan) and Co-Founder & Managing Partner Ahmed Hussain Tanoli (Advocate High Court), our chambers handle critical matters requiring exceptional legal intellect and courtroom presence. We represent clients across High Court Benches (Islamabad, Rawalpindi, Peshawar, Abbottabad, Lahore, Karachi) and the Supreme Court of Pakistan in constitutional, appellate, and public interest litigation.",
     statutoryFramework: [
       "Constitution of the Islamic Republic of Pakistan, 1973 (Part VII - The Judicature)",
       "Supreme Court Rules, 1980 & High Court Rules and Orders",
@@ -340,6 +340,72 @@ export const practiceAreas: PracticeArea[] = [
       "Aggrieved Citizens & Corporate Bodies Seeking Constitutional Redress",
       "Civil Servants, Statutory Employees & Regulated Sector Entities",
       "Corporations Defending Against Unlawful Administrative or Regulatory Orders",
+    ],
+  },
+  {
+    number: "07",
+    slug: "tax-advisory",
+    title: "Tax Advisory & Revenue Jurisprudence",
+    tagline: "Strategic fiscal counsel, direct & indirect tax planning, FBR compliance, and contentious revenue litigation across appellate tribunals and High Courts.",
+    summary: "Corporate & individual tax planning, FBR regulatory defense, sales tax compliance, and appellate tax litigation before ATIR and High Courts.",
+    overview:
+      "AST Law Firm delivers comprehensive tax advisory, fiscal planning, and contentious revenue controversy representation across Pakistan. Navigating the country's intricate and rapidly evolving tax landscape demands both forensic statutory interpretation and fearless courtroom advocacy. Our chambers counsel corporate enterprises, multinational ventures, financial institutions, and high-net-worth individuals across federal and provincial fiscal regimes—including the Federal Board of Revenue (FBR), Punjab Revenue Authority (PRA), Sindh Revenue Board (SRB), and Khyber Pakhtunkhwa Revenue Authority (KPRA). From proactive tax diagnostic audits, cross-border treaty structuring, and withholding tax compliance to high-stakes defense before the Commissioner Inland Revenue (Appeals), Appellate Tribunal Inland Revenue (ATIR), and High Court reference benches, our advocates ensure robust legal protection against arbitrary assessments, unlawful bank attachments, and statutory penalties.",
+    statutoryFramework: [
+      "Income Tax Ordinance, 2001 & Income Tax Rules, 2002",
+      "Sales Tax Act, 1990 & Federal Excise Act, 2005",
+      "Provincial Sales Tax on Services Statutes (PRA, SRB, KPRA & BRA Acts)",
+      "Federal Board of Revenue (FBR) Act, 2007 & SRO Regulatory Notifications",
+      "Customs Act, 1969 & Appellate Tribunal Rules",
+      "Constitution of the Islamic Republic of Pakistan, 1973 (Article 199 - Fiscal Writs)",
+    ],
+    proceduralStages: [
+      {
+        title: "Fiscal Audit Diagnostic & Exposure Scrutiny",
+        desc: "Forensic scrutiny of statutory accounts, withholding statements, sales tax returns, and transaction records to identify latent audit exposure before statutory notices are triggered.",
+      },
+      {
+        title: "Show-Cause Response & Assessment Scrutiny",
+        desc: "Drafting rigorous, evidence-backed legal replies to audit questionnaires, Section 122/177 notices under the Income Tax Ordinance, and show-cause proceedings under Section 11 of the Sales Tax Act.",
+      },
+      {
+        title: "First Appellate Forum: Commissioner (Appeals)",
+        desc: "Instituting statutory appeals before the Commissioner Inland Revenue (Appeals), formulating grounds of appeal, and securing protective interim orders against arbitrary tax recovery.",
+      },
+      {
+        title: "Second Appellate Forum: Appellate Tribunal (ATIR)",
+        desc: "Conducting evidentiary and legal arguments before the Appellate Tribunal Inland Revenue (ATIR) against erroneous assessments, arbitrary disallowances, and unlawful penalties.",
+      },
+      {
+        title: "High Court Tax References & Constitutional Writs",
+        desc: "Instituting Tax Reference Applications under Section 133 ITO before High Court Benches on questions of law, and filing Article 199 Constitutional Writ Petitions challenging ultra vires levies or coercive bank attachments under Section 140.",
+      },
+    ],
+    scopeOfServices: [
+      "Corporate & Commercial Income Tax Planning, Structuring & Advisory",
+      "Federal (FBR) & Provincial Sales Tax on Services Compliance (SRB, PRA, KPRA, BRA)",
+      "Representation before Commissioner Inland Revenue (Appeals) & Appellate Tribunal (ATIR)",
+      "High Court Tax References (Section 133 ITO) & Constitutional Fiscal Writs (Article 199)",
+      "Withholding Tax (WHT) Audits, Monitoring Notices & Annual Return Scrutiny",
+      "Securing Urgent Interim Restraining Orders against Coercive Recovery (Section 140 ITO)",
+      "Cross-Border Taxation, Double Taxation Avoidance Agreements (DTAA) & Foreign Remittances",
+      "Tax Exemption Petitions, Non-Profit Organization (NPO) Section 100C Approvals & Advance Rulings",
+      "Customs Valuation Disputes, Tariff Classification & Anti-Dumping Appeals",
+      "Defense in Criminal Tax Proceedings, Concealment Allegations & Penalty Mitigation",
+    ],
+    keyConsiderations: [
+      "Strict monitoring of jurisdictional limitation thresholds (30/60-day deadlines) to maintain statutory appeal rights",
+      "Preempting coercive bank account attachments under Section 140 through timely High Court injunctive relief",
+      "Challenging ultra vires statutory regulatory orders (SROs) and arbitrary reassessment notices under Section 122(5A)",
+      "Harmonizing inter-provincial sales tax disputes to eliminate double taxation across multiple revenue authorities",
+      "Ensuring corporate transaction documents and transfer pricing protocols withstand FBR anti-avoidance scrutiny",
+    ],
+    clientTypes: [
+      "Public & Private Limited Companies across Manufacturing, Energy, Tech & Telecom",
+      "Multinational Corporations & Foreign Direct Investors Entering Pakistan",
+      "Commercial Developers, Contractors & Engineering Project Sponsors",
+      "High-Net-Worth Individuals, Family Business Dynasties & Asset Holding Trusts",
+      "Importers, Exporters, Logistics Networks & Supply Chain Operators",
+      "Non-Profit Foundations & Statutory Institutions Seeking Fiscal Exemptions",
     ],
   },
 ];

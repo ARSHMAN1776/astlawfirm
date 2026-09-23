@@ -12,13 +12,17 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return practiceAreas.map((pa) => ({
+  const routes = practiceAreas.map((pa) => ({
     slug: pa.slug,
   }));
+  routes.push({ slug: "tax-advisor" });
+  return routes;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const practice = practiceAreas.find((p) => p.slug === params.slug);
+  const practice =
+    practiceAreas.find((p) => p.slug === params.slug) ||
+    (params.slug === "tax-advisor" ? practiceAreas.find((p) => p.slug === "tax-advisory") : undefined);
   if (!practice) return { title: "Practice Area Not Found | AST Law Firm" };
 
   return {
@@ -28,7 +32,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function PracticeAreaDetailPage({ params }: Props) {
-  const practice = practiceAreas.find((p) => p.slug === params.slug);
+  const practice =
+    practiceAreas.find((p) => p.slug === params.slug) ||
+    (params.slug === "tax-advisor" ? practiceAreas.find((p) => p.slug === "tax-advisory") : undefined);
 
   if (!practice) {
     notFound();

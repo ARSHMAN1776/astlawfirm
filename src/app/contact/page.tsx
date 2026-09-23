@@ -58,7 +58,15 @@ export default function ContactPage() {
               className="inline-flex items-center gap-2 px-5 py-3.5 border border-[#111110]/25 hover:border-[#111110] bg-transparent text-[#111110] text-[0.72rem] uppercase tracking-widest font-semibold transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-[#8B7355]" />
-              <span>Call: 0315 6559995</span>
+              <span>Mobile: 0315 6559995</span>
+            </a>
+
+            <a
+              href="tel:0512352396"
+              className="inline-flex items-center gap-2 px-5 py-3.5 border border-[#111110]/25 hover:border-[#111110] bg-transparent text-[#111110] text-[0.72rem] uppercase tracking-widest font-semibold transition-colors"
+            >
+              <Phone className="w-3.5 h-3.5 text-[#8B7355]" />
+              <span>Landline: 051-2352396</span>
             </a>
           </div>
         </div>
@@ -195,21 +203,30 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Phone */}
+                {/* Phone & Landline */}
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 border border-[rgba(17,17,16,0.12)] bg-[#EFECE3] flex items-center justify-center flex-shrink-0 text-[#111110]">
                     <Phone className="w-4 h-4 text-[#8B7355]" />
                   </div>
                   <div className="space-y-1">
                     <h3 className="text-[0.65rem] tracking-[0.2em] uppercase text-[#8A8780] font-medium">
-                      Phone Number
+                      Phone &amp; Landline
                     </h3>
-                    <p className="text-[#111110] text-sm font-medium font-mono">
-                      <a href="tel:03156559995" className="hover:text-[#8B7355] transition-colors">
-                        0315 6559995
-                      </a>
-                    </p>
-                    <p className="text-[#8A8780] text-xs">
+                    <div className="space-y-1 font-mono text-sm text-[#111110]">
+                      <div className="flex items-center gap-2">
+                        <span className="text-[0.65rem] font-sans uppercase tracking-wider text-[#8A8780] w-16">Mobile:</span>
+                        <a href="tel:03156559995" className="hover:text-[#8B7355] transition-colors font-medium">
+                          0315 6559995
+                        </a>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-[0.65rem] font-sans uppercase tracking-wider text-[#8A8780] w-16">Landline:</span>
+                        <a href="tel:0512352396" className="hover:text-[#8B7355] transition-colors font-medium">
+                          051-2352396
+                        </a>
+                      </div>
+                    </div>
+                    <p className="text-[#8A8780] text-xs pt-0.5">
                       Official Chamber Inquiries &amp; Appointments
                     </p>
                   </div>
@@ -248,7 +265,7 @@ export default function ContactPage() {
                       {contact.hours}
                     </p>
                     <p className="text-[#8A8780] text-xs">
-                      Closed on Weekends &amp; Court Holidays
+                      Closed on Sundays &amp; Gazetted Court Holidays
                     </p>
                   </div>
                 </div>
@@ -376,13 +393,24 @@ export default function ContactPage() {
                     <ArrowUpRight className="w-3.5 h-3.5 text-[#8B7355] transition-transform duration-200 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                   </a>
 
-                  <a
-                    href="tel:03156559995"
-                    className="inline-flex items-center gap-1.5 text-[0.65rem] tracking-[0.16em] uppercase text-[#5C5A54] hover:text-[#111110] font-medium transition-colors"
-                  >
-                    <Phone className="w-3 h-3 text-[#8B7355]" />
-                    <span>0315 6559995</span>
-                  </a>
+                  <div className="flex items-center gap-3">
+                    {"landline" in office && office.landline && (
+                      <a
+                        href={`tel:${(office.landline as string).replace(/[^0-9]/g, "")}`}
+                        className="inline-flex items-center gap-1.5 text-[0.65rem] tracking-[0.16em] uppercase text-[#5C5A54] hover:text-[#111110] font-medium transition-colors"
+                      >
+                        <Phone className="w-3 h-3 text-[#8B7355]" />
+                        <span>{office.landline}</span>
+                      </a>
+                    )}
+                    <a
+                      href="tel:03156559995"
+                      className="inline-flex items-center gap-1.5 text-[0.65rem] tracking-[0.16em] uppercase text-[#5C5A54] hover:text-[#111110] font-medium transition-colors"
+                    >
+                      <Phone className="w-3 h-3 text-[#8B7355]" />
+                      <span>0315 6559995</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
