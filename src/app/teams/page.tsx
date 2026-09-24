@@ -437,7 +437,7 @@ function LawyerCard({ lawyer, tier }: { lawyer: Lawyer; tier: "senior" | "associ
 
       {/* Portrait Image or Monogram Header */}
       {lawyer.image ? (
-        <div className="relative h-52 sm:h-56 w-full bg-[#E8E3D6] overflow-hidden border-b border-[rgba(17,17,16,0.12)] group">
+        <div className="relative h-60 sm:h-64 w-full bg-[#E8E3D6] overflow-hidden border-b border-[rgba(17,17,16,0.12)] group">
           <Image
             src={lawyer.image}
             alt={lawyer.name}

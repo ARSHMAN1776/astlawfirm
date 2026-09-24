@@ -18,14 +18,6 @@ export interface SupportStaff {
 
 export const seniorAssociates: TeamMember[] = [
   {
-    name: "Hareem Shahnawaz",
-    designation: "Advocate High Court",
-    association: "Senior Associate / Lawyer",
-    licenseNo: "BC-24-7849",
-    court: "High Court & Subordinate Courts",
-    image: "/team/hareem-shahnawaz.jpg",
-  },
-  {
     name: "Seemab Nayyer",
     designation: "Advocate High Court",
     association: "Senior Associate / Lawyer",
@@ -40,6 +32,14 @@ export const seniorAssociates: TeamMember[] = [
     licenseNo: "BC-14-5112",
     court: "High Court & Subordinate Courts",
     image: "/team/ayesha-sheraz-abbasi.jpg",
+  },
+  {
+    name: "Hareem Shahnawaz",
+    designation: "Advocate High Court",
+    association: "Senior Associate / Lawyer",
+    licenseNo: "BC-24-7849",
+    court: "High Court & Subordinate Courts",
+    image: "/team/hareem-shahnawaz.jpg",
   },
   {
     name: "Qaiser Hussain Shah",
