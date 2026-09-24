@@ -38,7 +38,7 @@ export const seniorAssociates: TeamMember[] = [
     designation: "Advocate",
     association: "Advocate / Lawyer",
     licenseNo: "BC-24-7849",
-    court: "High Court & Subordinate Courts, District Courts",
+    court: "District Courts",
     image: "/team/hareem-shahnawaz.jpg",
   },
   {
