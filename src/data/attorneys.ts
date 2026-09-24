@@ -174,7 +174,6 @@ export const attorneys: Attorney[] = [
       "Advocate, High Courts of Pakistan",
       "KPK Bar Council Registered Practitioner (BC-17-1527)",
       "High Court & Subordinate Courts (Hazara Division)",
-      "Islamabad Principal Chambers & Superior Court Practice",
     ],
     education: [
       "Bachelor of Laws (LL.B)",

@@ -28,17 +28,17 @@ export const seniorAssociates: TeamMember[] = [
   {
     name: "Ayesha Sheraz Abbasi",
     designation: "Advocate High Court",
-    association: "Senior Associate / Lawyer",
+    association: "Advocate / Lawyer",
     licenseNo: "BC-14-5112",
     court: "High Court & Subordinate Courts",
     image: "/team/ayesha-sheraz-abbasi.jpg",
   },
   {
     name: "Hareem Shahnawaz",
-    designation: "Advocate High Court",
-    association: "Senior Associate / Lawyer",
+    designation: "Advocate",
+    association: "Advocate / Lawyer",
     licenseNo: "BC-24-7849",
-    court: "High Court & Subordinate Courts",
+    court: "High Court & Subordinate Courts, District Courts",
     image: "/team/hareem-shahnawaz.jpg",
   },
   {
@@ -51,7 +51,7 @@ export const seniorAssociates: TeamMember[] = [
   {
     name: "Hafiz Gulfaraz Awan",
     designation: "Advocate High Court",
-    association: "Senior Associate / Lawyer",
+    association: "Advocate / Lawyer",
     licenseNo: "BC-23-6159",
     court: "High Court & Subordinate Courts",
     image: "/team/hafiz-gulfaraz-awan.jpg",
@@ -59,7 +59,7 @@ export const seniorAssociates: TeamMember[] = [
   {
     name: "Shoaib Ahmed Awan",
     designation: "Advocate High Court",
-    association: "Senior Associate / Lawyer",
+    association: "Advocate / Lawyer",
     licenseNo: "BC-18-1425",
     court: "High Court & Subordinate Courts",
     image: "/team/shoaib-ahmed-awan.jpg",
