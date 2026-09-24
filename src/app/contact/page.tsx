@@ -49,7 +49,7 @@ export default function ContactPage() {
               <div className="w-5 h-5 rounded-full bg-[#25D366] text-white flex items-center justify-center flex-shrink-0">
                 <MessageCircle className="w-3.5 h-3.5 fill-current text-white" />
               </div>
-              <span>Chat on WhatsApp · 0315 6559995</span>
+              <span>Chat on WhatsApp · {siteConfig.contact.whatsappDisplay}</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-[#8B7355] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
 

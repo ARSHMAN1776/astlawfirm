@@ -33,8 +33,8 @@ export const siteConfig = {
 
   // Contact — Official firm chambers and branches
   contact: {
-    whatsappNumber: "923156559995",
-    whatsappDisplay: "+92 315 6559995",
+    whatsappNumber: "923259540470",
+    whatsappDisplay: "0325 9540470",
     phone: "0315 6559995",
     phoneDisplay: "0315 6559995",
     landline: "051 2352396",
