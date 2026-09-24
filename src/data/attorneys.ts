@@ -85,7 +85,6 @@ export const attorneys: Attorney[] = [
     ],
     admissions: [
       "Advocate, High Courts of Pakistan",
-      "Islamabad Bar Council Registered Practitioner",
       "KPK Bar Council Registered Practitioner",
       "District & Subordinate Courts of Pakistan",
     ],
@@ -93,6 +92,7 @@ export const attorneys: Attorney[] = [
       "Bachelor of Laws (LL.B)",
       "Corporate Law & Civil Procedure Practice",
       "Commercial Drafting & Regulatory Jurisprudence",
+      "Land Acquisition Matter / Litigation",
     ],
     memberships: [
       "High Court Bar Association, Abbottabad",
