@@ -177,15 +177,31 @@ export default function TeamsPage() {
                   <div className="lg:col-span-8 space-y-6">
                     <div className="space-y-3">
                       {/* Premium Side Line with Bold Role Title */}
-                      <div className="flex items-center gap-3 border-l-2 border-[#8B7355] pl-3.5 py-0.5">
+                      <div className="flex flex-wrap items-center gap-3 border-l-2 border-[#8B7355] pl-3.5 py-0.5">
                         <span className="text-xs sm:text-[0.82rem] tracking-[0.18em] uppercase text-[#06231B] font-bold">{attorney.role}</span>
                         <span className="w-1.5 h-1.5 rounded-full bg-[#8B7355]" />
+                        {attorney.slug === "ahmed-hussain-tanoli" && (
+                          <span className="text-[0.58rem] font-mono tracking-wider uppercase px-2 py-0.5 bg-[#06231B] text-[#FAF8F4] font-semibold border border-[#8B7355]/50">
+                            Central Case Intake &amp; Bookings Lead
+                          </span>
+                        )}
                       </div>
                       <h2 className="text-3xl sm:text-4xl text-[#111110] font-semibold" style={{ fontFamily: "var(--font-cormorant), Georgia, serif", fontWeight: 600 }}>
                         {attorney.name}
                       </h2>
                       <p className="text-[0.7rem] tracking-[0.18em] uppercase text-[#8B7355] font-semibold">{attorney.designation}</p>
                     </div>
+
+                    {attorney.slug === "ahmed-hussain-tanoli" ? (
+                      <div className="p-3.5 bg-[#FAF8F4] border-l-2 border-[#06231B] border border-[rgba(17,17,16,0.08)] space-y-1">
+                        <span className="text-[0.58rem] font-mono tracking-wider uppercase text-[#06231B] font-bold block">
+                          Executive Consultation Notice
+                        </span>
+                        <p className="text-xs text-[#5C5A54] leading-relaxed">
+                          All client intake sessions, litigation consultations, and preliminary strategy conferences at AST Law Firm are personally attended and directed by Ahmed Hussain Tanoli.
+                        </p>
+                      </div>
+                    ) : null}
 
                     <p className="text-[#5C5A54] text-sm sm:text-base leading-relaxed">{attorney.shortBio}</p>
 
@@ -196,25 +212,55 @@ export default function TeamsPage() {
                         {attorney.practiceAreas
                           .filter((pa: string) => !pa.includes("[insert"))
                           .map((pa: string, idx: number) => (
-                            <span key={idx} className="text-xs border border-[rgba(17,17,16,0.15)] bg-[#F7F5EF] px-3 py-1 text-[#42403B]">{pa}</span>
+                            <span
+                              key={idx}
+                              className={`text-xs border px-3 py-1 ${
+                                attorney.slug === "ahmed-hussain-tanoli" &&
+                                (pa.includes("Mines") || pa.includes("Criminal"))
+                                  ? "border-[#06231B]/40 bg-[#06231B]/5 text-[#06231B] font-semibold"
+                                  : "border-[rgba(17,17,16,0.15)] bg-[#F7F5EF] text-[#42403B]"
+                              }`}
+                            >
+                              {pa}
+                            </span>
                           ))}
                       </div>
                     </div>
 
-                    <div className="pt-2 flex flex-wrap items-center gap-5">
-                      <Link
-                        href={`/contact?attorney=${encodeURIComponent(attorney.name)}`}
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-[#06231B] text-[#F7F5EF] hover:bg-[#0A3328] text-[0.68rem] uppercase tracking-widest transition-colors font-medium shadow-sm"
-                      >
-                        <span>Schedule Consultation</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </Link>
-                      <Link
-                        href={`/attorneys/${attorney.slug}`}
-                        className="text-[0.65rem] uppercase tracking-widest text-[#5C5A54] hover:text-[#111110] inline-flex items-center gap-1.5 transition-colors border-b border-transparent hover:border-[#111110] pb-0.5"
-                      >
-                        <span>View Full Profile →</span>
-                      </Link>
+                    <div className="pt-2 flex flex-wrap items-center gap-4">
+                      {attorney.slug === "ahmed-hussain-tanoli" ? (
+                        <>
+                          <Link
+                            href={`/contact?attorney=${encodeURIComponent(attorney.name)}`}
+                            className="inline-flex items-center gap-2 px-6 py-3 bg-[#06231B] text-[#F7F5EF] hover:bg-[#0A3328] text-[0.68rem] uppercase tracking-widest transition-colors font-medium shadow-sm"
+                          >
+                            <span>Schedule Consultation</span>
+                            <ArrowRight className="w-3.5 h-3.5" />
+                          </Link>
+                          <Link
+                            href={`/attorneys/${attorney.slug}`}
+                            className="inline-flex items-center gap-1.5 px-4 py-3 border border-[#111110]/25 hover:border-[#111110] bg-white text-[#111110] text-[0.68rem] uppercase tracking-widest transition-colors font-medium"
+                          >
+                            <span>View Executive Profile →</span>
+                          </Link>
+                        </>
+                      ) : (
+                        <>
+                          <Link
+                            href={`/contact?attorney=${encodeURIComponent(attorney.name)}`}
+                            className="inline-flex items-center gap-2 px-6 py-3 bg-[#06231B] text-[#F7F5EF] hover:bg-[#0A3328] text-[0.68rem] uppercase tracking-widest transition-colors font-medium shadow-sm"
+                          >
+                            <span>Schedule Consultation</span>
+                            <ArrowRight className="w-3.5 h-3.5" />
+                          </Link>
+                          <Link
+                            href={`/attorneys/${attorney.slug}`}
+                            className="text-[0.65rem] uppercase tracking-widest text-[#5C5A54] hover:text-[#111110] inline-flex items-center gap-1.5 transition-colors border-b border-transparent hover:border-[#111110] pb-0.5"
+                          >
+                            <span>View Full Profile →</span>
+                          </Link>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>

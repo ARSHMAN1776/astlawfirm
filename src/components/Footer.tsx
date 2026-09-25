@@ -88,14 +88,7 @@ export const Footer: React.FC = () => {
               <div className="w-5 h-[1px] bg-white/15" />
             </div>
             <ul className="space-y-2.5">
-              {[
-                { label: "Home", href: "/" },
-                { label: "About", href: "/about" },
-                { label: "Our Legacy", href: "/legacy" },
-                { label: "Practice Areas", href: "/practice-areas" },
-                { label: "Teams", href: "/teams" },
-                { label: "Contact", href: "/contact" },
-              ].map((item) => (
+              {[{ label: "Home", href: "/" }, ...siteConfig.navigation].map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}

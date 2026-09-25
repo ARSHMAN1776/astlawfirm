@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { attorneys } from "@/data/attorneys";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import { AhmedTanoliProfileView } from "@/components/AhmedTanoliProfileView";
 
 interface Props {
   params: {
@@ -33,6 +34,10 @@ export default function AttorneyProfilePage({ params }: Props) {
 
   if (!attorney) {
     notFound();
+  }
+
+  if (attorney.slug === "ahmed-hussain-tanoli") {
+    return <AhmedTanoliProfileView attorney={attorney} />;
   }
 
   return (

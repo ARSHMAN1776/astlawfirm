@@ -273,6 +273,208 @@
   animation: timelineSignalTravel 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
+/* ─── Stripe Ledger (attorney profile rows) ────────────────
+   A hairline rule draws across the top of each row, then thin vertical
+   stripes draw down beside each paragraph and the copy slides in after them.
+   Toggled by adding `.is-in` to the row / group (IntersectionObserver). */
+.stripe-row {
+  position: relative;
+  transition: background-color 0.4s ease;
+}
+.stripe-row:hover {
+  background-image: linear-gradient(90deg, rgba(139, 115, 85, 0.06), transparent 65%);
+}
+
+.stripe-h {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--rule);
+  pointer-events: none;
+}
+.stripe-h::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #8B7355 0%, #8B7355 45%, rgba(139, 115, 85, 0) 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.3s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--d, 0) * 1ms);
+}
+.is-in .stripe-h::after {
+  transform: scaleX(1);
+}
+
+.stripe-item {
+  position: relative;
+  padding-left: 1.4rem;
+}
+/* faint static track the coloured stripe draws over */
+.stripe-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.3rem;
+  bottom: 0.3rem;
+  width: 2px;
+  background: var(--rule);
+}
+.stripe-v {
+  position: absolute;
+  left: 0;
+  top: 0.3rem;
+  bottom: 0.3rem;
+  width: 2px;
+  background: #8B7355;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition:
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--i, 0) * 140ms + 300ms),
+    background-color 0.3s ease;
+}
+.stripe-v--green {
+  background: #06231B;
+}
+.is-in .stripe-v {
+  transform: scaleY(1);
+}
+.stripe-item:hover .stripe-v {
+  background: #06231B;
+}
+.stripe-item:hover .stripe-lead-text {
+  color: #06231B;
+}
+
+.stripe-body,
+.stripe-lead {
+  opacity: 0;
+  transition:
+    opacity 0.7s ease calc(var(--i, 0) * 140ms + 450ms),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--i, 0) * 140ms + 450ms);
+}
+.stripe-body {
+  transform: translateX(-10px);
+}
+.stripe-lead {
+  transform: translateY(10px);
+}
+.is-in .stripe-body,
+.is-in .stripe-lead {
+  opacity: 1;
+  transform: none;
+}
+
+.stripe-num {
+  font-variant-numeric: lining-nums;
+  color: rgba(139, 115, 85, 0.42);
+  transition: color 0.4s ease;
+}
+.stripe-row:hover .stripe-num {
+  color: #8B7355;
+}
+.stripe-row:hover .stripe-title {
+  color: #06231B;
+}
+
+/* News cover line-art: shapes draw themselves in.
+   Standalone (article header) they animate on load; inside a `.reveal-up`
+   card they wait for the card to scroll into view. */
+.news-motif .draw {
+  stroke-dasharray: 1;
+  animation: motifDraw 1.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--k, 0) * 70ms + 250ms);
+}
+@keyframes motifDraw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+.reveal-up .news-motif .draw {
+  animation: none;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 1.8s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--k, 0) * 70ms + 350ms);
+}
+.reveal-up.is-in .news-motif .draw {
+  stroke-dashoffset: 0;
+}
+.motif-spin {
+  transform-origin: 580px 165px;
+  animation: motifSpin 120s linear infinite;
+}
+@keyframes motifSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* ─── Custom page scrollbar (native one is hidden) ───────── */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.site-scrollbar-rail {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.site-scrollbar-thumb {
+  opacity: 0.6;
+  transition: opacity 0.35s ease, width 0.25s cubic-bezier(0.16, 1, 0.3, 1), right 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+.site-scrollbar-fill {
+  border-radius: 3px;
+  background: linear-gradient(180deg, #B09A6E 0%, #8B7355 45%, #06231B 100%);
+  box-shadow: 0 0 0 1px rgba(247, 245, 239, 0.35), 0 4px 14px -4px rgba(139, 115, 85, 0.55);
+}
+.site-scrollbar:hover .site-scrollbar-rail,
+.site-scrollbar[data-active="true"] .site-scrollbar-rail {
+  opacity: 1;
+}
+.site-scrollbar:hover .site-scrollbar-thumb,
+.site-scrollbar[data-active="true"] .site-scrollbar-thumb {
+  opacity: 1;
+  right: 3px;
+  width: 8px;
+}
+
+/* Mobile menu drawer entrance */
+@keyframes drawerIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: none; }
+}
+.nav-drawer-in {
+  animation: drawerIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Generic scroll reveal (news cards, careers blocks) */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.7s ease calc(var(--i, 0) * 90ms),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--i, 0) * 90ms);
+}
+.reveal-up.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Without JS nothing toggles `.is-in`, so show everything */
+@media (scripting: none) {
+  .stripe-h::after { transform: none; }
+  .stripe-v { transform: none; }
+  .stripe-body,
+  .stripe-lead,
+  .reveal-up { opacity: 1; transform: none; }
+  .reveal-up .news-motif .draw { stroke-dashoffset: 0; }
+}
+
 /* ─── Reduced Motion ─────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   * {

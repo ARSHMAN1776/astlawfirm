@@ -74,6 +74,8 @@ export const siteConfig = {
     { label: "Our Legacy", href: "/legacy" },
     { label: "Practice Areas", href: "/practice-areas" },
     { label: "Teams", href: "/teams" },
+    { label: "News & Updates", href: "/news-updates" },
+    { label: "Careers", href: "/careers" },
     { label: "Contact", href: "/contact" },
   ],
 

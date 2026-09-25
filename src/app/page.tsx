@@ -196,15 +196,15 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Box 3 — Karachi Practice */}
+            {/* Box 3 — KPK (Abbottabad) & Sindh (Karachi) Chambers */}
             <div className="bg-white border border-[rgba(17,17,16,0.14)] p-5 sm:p-6 hover:border-[#8B7355] transition-colors flex items-start gap-4 group">
               <div className="w-11 h-11 rounded-sm bg-[#06231B] text-[#FAF8F4] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
                 <Briefcase className="w-5 h-5 text-[#8B7355]" />
               </div>
               <div className="min-w-0">
                 <span className="text-[0.62rem] tracking-[0.2em] uppercase text-[#8B7355] font-semibold block">Corporate Counsel</span>
-                <p className="text-base font-bold text-[#111110] mt-0.5" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Karachi Chambers</p>
-                <p className="text-xs text-[#5C5A54] mt-0.5">High Court of Sindh Counsel</p>
+                <p className="text-base font-bold leading-snug text-[#111110] mt-0.5" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>KPK (Abbottabad), Sindh (Karachi) Chambers</p>
+                <p className="text-xs text-[#5C5A54] mt-0.5">High Court of Peshawar &amp; Sindh</p>
               </div>
             </div>
 

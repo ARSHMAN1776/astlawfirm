@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Plus_Jakarta_Sans, Cinzel } from "next/font/google"
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { ScrollBar } from "@/components/ScrollBar";
 import { siteConfig } from "@/config/site";
 
 const cormorant = Cormorant_Garamond({
@@ -119,6 +120,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-[#F7F5EF] text-[#111110] font-sans antialiased selection:bg-[#111110] selection:text-[#F7F5EF]">
+        <ScrollBar />
         <div className="flex min-h-screen flex-col">
           <Navbar />
           <main className="flex-1">{children}</main>

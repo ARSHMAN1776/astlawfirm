@@ -3,6 +3,7 @@ import { siteConfig } from "@/config/site";
 import { practiceAreas } from "@/data/practiceAreas";
 import { attorneys } from "@/data/attorneys";
 import { insightArticles } from "@/data/insights";
+import { newsItems } from "@/data/news";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url;
@@ -10,9 +11,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
     "/about",
+    "/legacy",
     "/practice-areas",
     "/teams",
     "/attorneys",
+    "/news-updates",
+    "/careers",
     "/insights",
     "/contact",
     "/privacy-policy",
@@ -47,5 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
-  return [...staticRoutes, ...practiceRoutes, ...attorneyRoutes, ...insightRoutes];
+  const newsRoutes = newsItems.map((n) => ({
+    url: `${baseUrl}/news-updates/${n.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
+
+  return [...staticRoutes, ...practiceRoutes, ...attorneyRoutes, ...insightRoutes, ...newsRoutes];
 }
