@@ -64,8 +64,100 @@ export const practiceDomains: PracticeDomain[] = [
     ],
   },
   {
-    id: "criminal-defense",
+    id: "corporate-commercial",
     number: "03",
+    category: "Enterprise Structuring & Governance",
+    title: "Corporate & Commercial Advisory",
+    authority: "Companies Act 2017",
+    framework:
+      "Companies Act, 2017; Limited Liability Partnership Act, 2017; SECP regulations; Contract Act, 1872; Competition Act, 2010; High Court Company Benches.",
+    scope: [
+      {
+        lead: "Entity Formation & Structuring",
+        text: "Structuring private limited companies, single-member companies and LLPs, and drafting customized Memoranda and Articles of Association.",
+      },
+      {
+        lead: "Commercial Drafting & Transactions",
+        text: "Drafting and negotiating commercial supply contracts, concession joint ventures, shareholder agreements and cross-border commercial arrangements.",
+      },
+      {
+        lead: "High Court Company Litigation",
+        text: "Handling winding-up petitions and shareholder oppression and mismanagement petitions before the High Court Company Benches, and challenges to SECP orders through the statutory appellate route.",
+      },
+    ],
+  },
+  {
+    id: "adr-arbitration",
+    number: "04",
+    category: "Dispute Resolution & Arbitration",
+    title: "ADR & Commercial Arbitration",
+    authority: "Arbitration Act 1940",
+    framework:
+      "Arbitration Act, 1940; Recognition and Enforcement (Arbitration Agreements and Foreign Arbitral Awards) Act, 2011; Civil Courts and High Courts of Pakistan.",
+    scope: [
+      {
+        lead: "Domestic & Commercial Arbitration",
+        text: "Representing corporate enterprises and concessionaires in contractual, infrastructure and commercial arbitral tribunals across Pakistan.",
+      },
+      {
+        lead: "Rule of Court & Award Enforcement",
+        text: "Instituting proceedings under Sections 14 and 17 of the Arbitration Act to make awards the rule of the court and enforceable as decrees, and defending against challenges to awards under Sections 30 and 33.",
+      },
+      {
+        lead: "Structured Commercial Mediation",
+        text: "Conducting private settlement sessions and formulating enforceable compromise deeds to avoid protracted litigation.",
+      },
+    ],
+  },
+  {
+    id: "high-court-appellate",
+    number: "05",
+    category: "Superior Judiciary & Constitutional Review",
+    title: "High Court & Appellate Advocacy",
+    authority: "Article 199 Writs",
+    framework:
+      "Constitution of the Islamic Republic of Pakistan, 1973 (Part VII); High Court Rules and Orders; Code of Civil Procedure, 1908 (CPC); Islamabad, Lahore and Peshawar High Courts.",
+    scope: [
+      {
+        lead: "Constitutional Writ Petitions (Article 199)",
+        text: "Instituting and arguing writ petitions (mandamus, certiorari, prohibition) challenging ultra vires executive action, arbitrary license cancellations and government tender irregularities.",
+      },
+      {
+        lead: "Civil & Commercial Appeals",
+        text: "Regular First Appeals (Section 96 CPC), Regular Second Appeals on substantial questions of law (Section 100) and civil revisions (Section 115) against the orders of subordinate courts.",
+      },
+      {
+        lead: "Interlocutory Injunctions & Stays",
+        text: "Securing urgent restraining orders and status quo protection under Order XXXIX Rules 1 & 2 CPC to prevent irreversible prejudice pending final adjudication.",
+      },
+    ],
+  },
+  {
+    id: "civil-land-property",
+    number: "06",
+    category: "Land Revenue & Property Titles",
+    title: "Civil, Land Tenures & Property Litigation",
+    authority: "Specific Relief Act 1877",
+    framework:
+      "Specific Relief Act, 1877; Land Acquisition Act, 1894; Transfer of Property Act, 1882; West Pakistan Land Revenue Act, 1967; Subordinate Civil Courts and High Courts.",
+    scope: [
+      {
+        lead: "Substantive Civil Suits",
+        text: "Prosecuting and defending suits for declaration of title, permanent and mandatory injunctions, partition of commercial and ancestral properties, and specific performance of contracts.",
+      },
+      {
+        lead: "Revenue Record & Mutation Scrutiny",
+        text: "In-depth examination of revenue records (*fard*, *intiqal* / mutation, *jamabandi*, *khasra girdawari*) to remedy defects in title and prevent fraudulent alienation.",
+      },
+      {
+        lead: "Land Acquisition & Valuation References",
+        text: "Representing landholders and real estate developers before the Land Acquisition Collector and, under Section 18, the Reference Court for fair statutory compensation.",
+      },
+    ],
+  },
+  {
+    id: "criminal-defense",
+    number: "07",
     category: "Trial & Appellate Criminal Jurisprudence",
     title: "Criminal Defense & Quashment (Sec. 561-A)",
     authority: "Cr.P.C. 1898",
@@ -88,7 +180,7 @@ export const practiceDomains: PracticeDomain[] = [
   },
   {
     id: "white-collar",
-    number: "04",
+    number: "08",
     category: "Special Statutes & Regulatory Offenses",
     title: "White-Collar Crime & FIA Proceedings",
     authority: "Special Enactments",
@@ -110,77 +202,8 @@ export const practiceDomains: PracticeDomain[] = [
     ],
   },
   {
-    id: "corporate-commercial",
-    number: "05",
-    category: "Enterprise Structuring & Governance",
-    title: "Corporate & Commercial Advisory",
-    authority: "Companies Act 2017",
-    framework:
-      "Companies Act, 2017; Limited Liability Partnership Act, 2017; SECP regulations; Contract Act, 1872; Competition Act, 2010; High Court Company Benches.",
-    scope: [
-      {
-        lead: "Entity Formation & Structuring",
-        text: "Structuring private limited companies, single-member companies and LLPs, and drafting customized Memoranda and Articles of Association.",
-      },
-      {
-        lead: "Commercial Drafting & Transactions",
-        text: "Drafting and negotiating commercial supply contracts, concession joint ventures, shareholder agreements and cross-border commercial arrangements.",
-      },
-      {
-        lead: "High Court Company Litigation",
-        text: "Handling winding-up petitions and shareholder oppression and mismanagement petitions before the High Court Company Benches, and challenges to SECP orders through the statutory appellate route.",
-      },
-    ],
-  },
-  {
-    id: "high-court-appellate",
-    number: "06",
-    category: "Superior Judiciary & Constitutional Review",
-    title: "High Court & Appellate Advocacy",
-    authority: "Article 199 Writs",
-    framework:
-      "Constitution of the Islamic Republic of Pakistan, 1973 (Part VII); High Court Rules and Orders; Code of Civil Procedure, 1908 (CPC); Islamabad, Lahore and Peshawar High Courts.",
-    scope: [
-      {
-        lead: "Constitutional Writ Petitions (Article 199)",
-        text: "Instituting and arguing writ petitions (mandamus, certiorari, prohibition) challenging ultra vires executive action, arbitrary license cancellations and government tender irregularities.",
-      },
-      {
-        lead: "Civil & Commercial Appeals",
-        text: "Regular First Appeals (Section 96 CPC), Regular Second Appeals on substantial questions of law (Section 100) and civil revisions (Section 115) against the orders of subordinate courts.",
-      },
-      {
-        lead: "Interlocutory Injunctions & Stays",
-        text: "Securing urgent restraining orders and status quo protection under Order XXXIX Rules 1 & 2 CPC to prevent irreversible prejudice pending final adjudication.",
-      },
-    ],
-  },
-  {
-    id: "adr-arbitration",
-    number: "07",
-    category: "Dispute Resolution & Arbitration",
-    title: "ADR & Commercial Arbitration",
-    authority: "Arbitration Act 1940",
-    framework:
-      "Arbitration Act, 1940; Recognition and Enforcement (Arbitration Agreements and Foreign Arbitral Awards) Act, 2011; Civil Courts and High Courts of Pakistan.",
-    scope: [
-      {
-        lead: "Domestic & Commercial Arbitration",
-        text: "Representing corporate enterprises and concessionaires in contractual, infrastructure and commercial arbitral tribunals across Pakistan.",
-      },
-      {
-        lead: "Rule of Court & Award Enforcement",
-        text: "Instituting proceedings under Sections 14 and 17 of the Arbitration Act to make awards the rule of the court and enforceable as decrees, and defending against challenges to awards under Sections 30 and 33.",
-      },
-      {
-        lead: "Structured Commercial Mediation",
-        text: "Conducting private settlement sessions and formulating enforceable compromise deeds to avoid protracted litigation.",
-      },
-    ],
-  },
-  {
     id: "banking-finance",
-    number: "08",
+    number: "09",
     category: "Financial Institutions & Recovery Defense",
     title: "Banking & Financial Disputes",
     authority: "Ordinance XLVI of 2001",
@@ -203,7 +226,7 @@ export const practiceDomains: PracticeDomain[] = [
   },
   {
     id: "tax-revenue",
-    number: "09",
+    number: "10",
     category: "Fiscal Laws & Appellate Revenue",
     title: "Tax Advisory & Revenue Jurisprudence",
     authority: "Income & Sales Tax",
@@ -221,29 +244,6 @@ export const practiceDomains: PracticeDomain[] = [
       {
         lead: "High Court Tax References (Section 133)",
         text: "Instituting reference applications before the High Court on questions of law arising from Tribunal orders, and seeking restraining orders against coercive bank account attachments.",
-      },
-    ],
-  },
-  {
-    id: "civil-land-property",
-    number: "10",
-    category: "Land Revenue & Property Titles",
-    title: "Civil, Land Tenures & Property Litigation",
-    authority: "Specific Relief Act 1877",
-    framework:
-      "Specific Relief Act, 1877; Land Acquisition Act, 1894; Transfer of Property Act, 1882; West Pakistan Land Revenue Act, 1967; Subordinate Civil Courts and High Courts.",
-    scope: [
-      {
-        lead: "Substantive Civil Suits",
-        text: "Prosecuting and defending suits for declaration of title, permanent and mandatory injunctions, partition of commercial and ancestral properties, and specific performance of contracts.",
-      },
-      {
-        lead: "Revenue Record & Mutation Scrutiny",
-        text: "In-depth examination of revenue records (*fard*, *intiqal* / mutation, *jamabandi*, *khasra girdawari*) to remedy defects in title and prevent fraudulent alienation.",
-      },
-      {
-        lead: "Land Acquisition & Valuation References",
-        text: "Representing landholders and real estate developers before the Land Acquisition Collector and, under Section 18, the Reference Court for fair statutory compensation.",
       },
     ],
   },
