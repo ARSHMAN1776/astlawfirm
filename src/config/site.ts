@@ -57,7 +57,7 @@ export const siteConfig = {
         name: "AST LAW FIRM ABBOTTABAD",
         address: "Office No. 44 & 45, Sherpao Lawyers Plaza, Near District Bar Room, Abbottabad",
         detail: "District Bar & Judicial Complex Liaison",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Office+No.+44+%26+45%2C+Sherpao+Lawyers+Plaza%2C+Near+District+Bar+Room%2C+Abbottabad",
+        mapUrl: "https://maps.google.com/maps?q=34.14509582519531%2C73.21002960205078&z=17&hl=en",
       },
       {
         city: "Karachi",

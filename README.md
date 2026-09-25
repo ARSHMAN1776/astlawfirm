@@ -138,7 +138,7 @@ astlawfirm/
 
 ### Abbottabad Office (Office 2)
 - **Address**: Office No. 44 & 45, Sherpao Lawyers Plaza, Near District Bar Room, Abbottabad
-- **Google Maps**: [Open in Google Maps](https://maps.app.goo.gl/5u4Y9P4F2ZzPqD8)
+- **Google Maps**: [Open in Google Maps](https://maps.google.com/maps?q=34.14509582519531%2C73.21002960205078&z=17&hl=en)
 
 ### Direct Chamber Communications
 - **Direct Phone**: `0315 6559995`
