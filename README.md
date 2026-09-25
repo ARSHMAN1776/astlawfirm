@@ -134,7 +134,7 @@ astlawfirm/
 
 ### Islamabad Chambers (Office 1)
 - **Address**: Flat No. 1, Barrister Arcade, Opposite Family Courts Complex, G 10/1, Islamabad
-- **Google Maps**: [Open in Google Maps](https://maps.app.goo.gl/u7u4Z1Vz4F2ZzPqD8)
+- **Google Maps**: [Open in Google Maps](https://maps.google.com/maps?q=33.6696297%2C73.0145609&z=17&hl=en)
 
 ### Abbottabad Office (Office 2)
 - **Address**: Office No. 44 & 45, Sherpao Lawyers Plaza, Near District Bar Room, Abbottabad

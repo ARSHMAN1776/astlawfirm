@@ -50,7 +50,7 @@ export const siteConfig = {
         detail: "Islamabad Principal Chambers",
         phone: "0315 6559995",
         landline: "051-2352396",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Flat+No.+1%2C+Barrister+Arcade%2C+Opposite+Family+Courts+Complex%2C+G+10%2F1%2C+Islamabad",
+        mapUrl: "https://maps.google.com/maps?q=33.6696297%2C73.0145609&z=17&hl=en",
       },
       {
         city: "Abbottabad",
@@ -64,7 +64,7 @@ export const siteConfig = {
         name: "AST LAW FIRM KARACHI",
         address: "Room # 13, 2nd Floor, Namco Centre, Campbell Street, Karachi",
         detail: "Karachi Chamber",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Room+%23+13%2C+2nd+Floor%2C+Namco+Centre%2C+Campbell+Street%2C+Karachi",
+        mapUrl: "https://maps.google.com/maps?q=24.8532639%2C67.0069225&z=17&hl=en",
       },
     ],
   },

@@ -142,9 +142,14 @@ export const Footer: React.FC = () => {
                   <p className="text-[0.7rem] font-semibold text-white/80 tracking-wide">
                     AST LAW FIRM ISLAMABAD
                   </p>
-                  <p className="text-[0.62rem] text-white/35 leading-relaxed">
+                  <a
+                    href={siteConfig.contact.offices[0].mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-[0.62rem] text-white/35 leading-relaxed hover:text-white/70 transition-colors"
+                  >
                     Flat No.1, Barrister Arcade, Opp. Family Courts Complex, G 10/1, Islamabad
-                  </p>
+                  </a>
                 </div>
               </div>
 
