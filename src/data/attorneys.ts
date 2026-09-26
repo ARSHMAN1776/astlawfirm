@@ -121,13 +121,13 @@ export const attorneys: Attorney[] = [
     descriptor: "ADVOCATE HIGH COURT, SINDH",
     isFounder: false,
     shortBio:
-      "Partner & Corporate Counsel (Karachi) at AST Law Firm. Advocate High Court, Sindh. Leads commercial advisory, corporate compliance, and superior court litigation across Karachi and Sindh. Holds LL.B and LL.M degrees from recognised universities and is a founding member of the Corporate & Banking Bar Association Sindh (Karachi).",
+      "Partner & Corporate Counsel (Karachi) at AST Law Firm. Advocate High Court, Sindh. Leads commercial advisory, corporate compliance, and superior court litigation across Karachi and Sindh. Holds LL.B from a recognised institution and LL.M from S.M. Law College, Karachi, affiliated with University of Karachi. Founder Member of the Corporate & Banking Lawyers Association Karachi.",
     biography: [
       "Muhammad Javed Khan Tanoli is a Partner and Corporate Counsel at AST Law Firm, leading the firm's Karachi and Sindh legal practice.",
       "As Advocate High Court of Sindh (Karachi), he counsels corporate enterprises, financial institutions, and private clients on high-value commercial transactions, regulatory frameworks, and superior court dispute resolution.",
       "With seasoned courtroom advocacy and transactional experience before the High Court of Sindh and specialized tribunals, he provides strategic counsel across banking, commercial contracts, civil law, and corporate governance.",
       "He manages the firm's legal practice and superior court litigation exclusively within Karachi and Sindh, providing dedicated client representation before the High Court of Sindh, appellate benches, and provincial judicial forums.",
-      "Muhammad Javed Khan Tanoli, Advocate High Court, holds LL.B and LL.M degrees from recognised universities and is a founding member of the Corporate & Banking Bar Association Sindh (Karachi).",
+      "A Founder Member of the Corporate & Banking Lawyers Association Karachi, he holds an LL.M from S.M. Law College, Karachi, affiliated with University of Karachi.",
     ],
     practiceAreas: [
       "Corporate & Commercial Advisory",
@@ -141,16 +141,15 @@ export const attorneys: Attorney[] = [
       "Advocate, High Court of Sindh",
       "Sindh Bar Council Registered Practitioner",
       "Karachi Bar Association & Subordinate Courts (Sindh)",
-      "Founding Member of Corporate & Banking Bar Association Sindh (Karachi)",
     ],
     education: [
-      "LL.B & LL.M from recognised universities",
       "Bachelor of Laws (LL.B)",
+      "LL.M — S.M. Law College, Karachi (University of Karachi)",
       "Corporate Law & Commercial Governance Practice",
       "Civil Procedure & Appellate Jurisprudence",
     ],
     memberships: [
-      "Founding Member of Corporate & Banking Bar Association Sindh (Karachi)",
+      "Founder Member, Corporate & Banking Lawyers Association Karachi",
       "Sindh High Court Bar Association (SHCBA)",
       "Karachi Bar Association (KBA)",
       "Partner & Corporate Counsel, AST Law Firm (Karachi)",
