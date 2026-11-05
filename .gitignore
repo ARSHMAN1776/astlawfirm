@@ -1,0 +1,39 @@
+# Next.js & Node dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# Next.js build output & cache
+/.next/
+/out/
+/build
+
+# Testing & coverage
+/coverage
+
+# Environment variables
+.env
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+*.pem
+.vscode/
+.idea/
+
+# Root level test screenshots / temp artifacts
+/*.png
+/*.jpg
+/*.jpeg
+!/public/**

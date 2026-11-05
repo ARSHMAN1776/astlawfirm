@@ -1,0 +1,486 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Light Palette */
+    --cream:       #F7F5EF;
+    --cream-deep:  #EFECE3;
+    --parchment:   #E8E3D6;
+    --ink:         #111110;
+    --ink-mid:     #2D2C2A;
+    --ink-muted:   #5C5A54;
+    --ink-subtle:  #8A8780;
+    --rule:        rgba(17, 17, 16, 0.12);
+    --rule-mid:    rgba(17, 17, 16, 0.07);
+    --gold:        #8B7355;
+    --gold-light:  #B09A6E;
+
+    /* Dark section palette */
+    --dark:        #0F0E0D;
+    --dark-surface:#181714;
+    --dark-border: rgba(255, 255, 255, 0.10);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--cream);
+    color: var(--ink);
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  body {
+    background-color: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: var(--ink);
+    color: var(--cream);
+  }
+
+  :focus-visible {
+    outline: 1.5px solid var(--ink);
+    outline-offset: 3px;
+  }
+}
+
+/* ─── Typography Utilities ──────────────────────────────── */
+
+.font-display {
+  font-family: var(--font-cormorant), Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+
+.font-display-italic {
+  font-family: var(--font-cormorant), Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.12;
+}
+
+.label-caps {
+  font-size: 0.6875rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* ─── Hairline Rules ───────────────────────────────────── */
+
+.rule-b  { border-bottom: 1px solid var(--rule); }
+.rule-t  { border-top:    1px solid var(--rule); }
+.rule-l  { border-left:   1px solid var(--rule); }
+.rule-r  { border-right:  1px solid var(--rule); }
+.rule-x  { border-left: 1px solid var(--rule); border-right: 1px solid var(--rule); }
+
+.rule-b-mid { border-bottom: 1px solid var(--rule-mid); }
+.rule-t-mid { border-top:    1px solid var(--rule-mid); }
+
+/* ─── Background Surfaces ──────────────────────────────── */
+
+.bg-cream      { background-color: var(--cream); }
+.bg-cream-deep { background-color: var(--cream-deep); }
+.bg-parchment  { background-color: var(--parchment); }
+.bg-dark       { background-color: var(--dark); }
+.bg-dark-surface { background-color: var(--dark-surface); }
+
+/* ─── Dark section rule overrides ─────────────────────── */
+.section-dark .rule-b  { border-bottom-color: var(--dark-border); }
+.section-dark .rule-t  { border-top-color: var(--dark-border); }
+
+/* ─── Hover Row (Light Context) ─────────────────────── */
+.practice-row {
+  transition: background-color 0.28s ease, padding-left 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.practice-row:hover {
+  background-color: var(--cream-deep);
+  padding-left: 0.5rem;
+}
+
+/* ─── Image Frame (architectural corner lines) ─────────── */
+.img-frame {
+  position: relative;
+}
+.img-frame::before,
+.img-frame::after {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  z-index: 10;
+}
+.img-frame::before {
+  top: -8px;
+  left: -8px;
+  border-top: 1px solid var(--ink-mid);
+  border-left: 1px solid var(--ink-mid);
+}
+.img-frame::after {
+  bottom: -8px;
+  right: -8px;
+  border-bottom: 1px solid var(--ink-mid);
+  border-right: 1px solid var(--ink-mid);
+}
+
+/* ─── Premium Running Border Beam & Corner Animation ────────── */
+@keyframes beam-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-border-beam {
+  animation: beam-rotate 6s linear infinite;
+}
+
+.animate-border-beam-slow {
+  animation: beam-rotate 9s linear infinite;
+}
+
+.corner-bracket-tl {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 10px;
+  height: 10px;
+  border-top: 1.5px solid #8B7355;
+  border-left: 1.5px solid #8B7355;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0.75;
+}
+
+.corner-bracket-tr {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 10px;
+  height: 10px;
+  border-top: 1.5px solid #8B7355;
+  border-right: 1.5px solid #8B7355;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0.75;
+}
+
+.corner-bracket-bl {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 1.5px solid #8B7355;
+  border-left: 1.5px solid #8B7355;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0.75;
+}
+
+.corner-bracket-br {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 1.5px solid #8B7355;
+  border-right: 1.5px solid #8B7355;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0.75;
+}
+
+.group:hover .corner-bracket-tl {
+  top: 4px;
+  left: 4px;
+  border-color: #06231B;
+  opacity: 1;
+  filter: drop-shadow(-1px -1px 3px rgba(139, 115, 85, 0.4));
+}
+
+.group:hover .corner-bracket-tr {
+  top: 4px;
+  right: 4px;
+  border-color: #06231B;
+  opacity: 1;
+  filter: drop-shadow(1px -1px 3px rgba(139, 115, 85, 0.4));
+}
+
+.group:hover .corner-bracket-bl {
+  bottom: 4px;
+  left: 4px;
+  border-color: #06231B;
+  opacity: 1;
+  filter: drop-shadow(-1px 1px 3px rgba(139, 115, 85, 0.4));
+}
+
+.group:hover .corner-bracket-br {
+  bottom: 4px;
+  right: 4px;
+  border-color: #06231B;
+  opacity: 1;
+  filter: drop-shadow(1px 1px 3px rgba(139, 115, 85, 0.4));
+}
+
+/* ─── Timeline Animated Connector ─────────────────────── */
+@keyframes timelinePulseBeam {
+  0%, 100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.timeline-connector-line {
+  animation: timelinePulseBeam 2.5s ease-in-out infinite;
+}
+
+@keyframes timelineSignalTravel {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+.timeline-signal-particle {
+  animation: timelineSignalTravel 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* ─── Stripe Ledger (attorney profile rows) ────────────────
+   A hairline rule draws across the top of each row, then thin vertical
+   stripes draw down beside each paragraph and the copy slides in after them.
+   Toggled by adding `.is-in` to the row / group (IntersectionObserver). */
+.stripe-row {
+  position: relative;
+  transition: background-color 0.4s ease;
+}
+.stripe-row:hover {
+  background-image: linear-gradient(90deg, rgba(139, 115, 85, 0.06), transparent 65%);
+}
+
+.stripe-h {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--rule);
+  pointer-events: none;
+}
+.stripe-h::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #8B7355 0%, #8B7355 45%, rgba(139, 115, 85, 0) 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.3s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--d, 0) * 1ms);
+}
+.is-in .stripe-h::after {
+  transform: scaleX(1);
+}
+
+.stripe-item {
+  position: relative;
+  padding-left: 1.4rem;
+}
+/* faint static track the coloured stripe draws over */
+.stripe-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.3rem;
+  bottom: 0.3rem;
+  width: 2px;
+  background: var(--rule);
+}
+.stripe-v {
+  position: absolute;
+  left: 0;
+  top: 0.3rem;
+  bottom: 0.3rem;
+  width: 2px;
+  background: #8B7355;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition:
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--i, 0) * 140ms + 300ms),
+    background-color 0.3s ease;
+}
+.stripe-v--green {
+  background: #06231B;
+}
+.is-in .stripe-v {
+  transform: scaleY(1);
+}
+.stripe-item:hover .stripe-v {
+  background: #06231B;
+}
+.stripe-item:hover .stripe-lead-text {
+  color: #06231B;
+}
+
+.stripe-body,
+.stripe-lead {
+  opacity: 0;
+  transition:
+    opacity 0.7s ease calc(var(--i, 0) * 140ms + 450ms),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--i, 0) * 140ms + 450ms);
+}
+.stripe-body {
+  transform: translateX(-10px);
+}
+.stripe-lead {
+  transform: translateY(10px);
+}
+.is-in .stripe-body,
+.is-in .stripe-lead {
+  opacity: 1;
+  transform: none;
+}
+
+.stripe-num {
+  font-variant-numeric: lining-nums;
+  color: rgba(139, 115, 85, 0.42);
+  transition: color 0.4s ease;
+}
+.stripe-row:hover .stripe-num {
+  color: #8B7355;
+}
+.stripe-row:hover .stripe-title {
+  color: #06231B;
+}
+
+/* News cover line-art: shapes draw themselves in.
+   Standalone (article header) they animate on load; inside a `.reveal-up`
+   card they wait for the card to scroll into view. */
+.news-motif .draw {
+  stroke-dasharray: 1;
+  animation: motifDraw 1.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--k, 0) * 70ms + 250ms);
+}
+@keyframes motifDraw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+.reveal-up .news-motif .draw {
+  animation: none;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 1.8s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--k, 0) * 70ms + 350ms);
+}
+.reveal-up.is-in .news-motif .draw {
+  stroke-dashoffset: 0;
+}
+.motif-spin {
+  transform-origin: 580px 165px;
+  animation: motifSpin 120s linear infinite;
+}
+@keyframes motifSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* ─── Custom page scrollbar (native one is hidden) ───────── */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.site-scrollbar-rail {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.site-scrollbar-thumb {
+  opacity: 0.6;
+  transition: opacity 0.35s ease, width 0.25s cubic-bezier(0.16, 1, 0.3, 1), right 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+.site-scrollbar-fill {
+  border-radius: 3px;
+  background: linear-gradient(180deg, #B09A6E 0%, #8B7355 45%, #06231B 100%);
+  box-shadow: 0 0 0 1px rgba(247, 245, 239, 0.35), 0 4px 14px -4px rgba(139, 115, 85, 0.55);
+}
+.site-scrollbar:hover .site-scrollbar-rail,
+.site-scrollbar[data-active="true"] .site-scrollbar-rail {
+  opacity: 1;
+}
+.site-scrollbar:hover .site-scrollbar-thumb,
+.site-scrollbar[data-active="true"] .site-scrollbar-thumb {
+  opacity: 1;
+  right: 3px;
+  width: 8px;
+}
+
+/* Mobile menu drawer entrance */
+@keyframes drawerIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: none; }
+}
+.nav-drawer-in {
+  animation: drawerIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Generic scroll reveal (news cards, careers blocks) */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.7s ease calc(var(--i, 0) * 90ms),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--i, 0) * 90ms);
+}
+.reveal-up.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Without JS nothing toggles `.is-in`, so show everything */
+@media (scripting: none) {
+  .stripe-h::after { transform: none; }
+  .stripe-v { transform: none; }
+  .stripe-body,
+  .stripe-lead,
+  .reveal-up { opacity: 1; transform: none; }
+  .reveal-up .news-motif .draw { stroke-dashoffset: 0; }
+}
+
+/* ─── Reduced Motion ─────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
